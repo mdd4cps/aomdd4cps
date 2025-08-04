@@ -1,0 +1,173 @@
+{
+    "modifications": [
+        {
+            "xpath": "//object[@type='comm_thread']",
+            "attributes": [
+                {
+                    "name": "operation_modes",
+                    "statement": "What are the operation modes under which this communication operates?",
+                    "hint": {
+                        "header": "These are the recommendations for the operation modes",
+                        "elements" : [
+                            "operation_modes_description" 
+                        ]
+                    },
+                    "conditional": {
+                        "operation_modes_enabled" :"true"
+                    },
+                    "parametersTable": {
+                        "headers": [
+                            "code",
+                            "name",
+                            "description"
+                        ],
+                        "sequence_values": {
+                            "code" : 0
+                        }
+                    }
+                    
+                },
+                {
+                    "name": "data_structure_psm",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description",
+                            "type"
+                        ],
+                        "dropdown_box_values": {
+                            "type": ["int", "double", "string", "char[50]", "bool"]
+                        }
+                    },
+                    "statement": "What are the variable types of this dependum's data structure?",
+                    "derivate_from": "dependum_data_structure" 
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='action']",
+            "attributes": [
+                {
+                    "name": "input_parameters_psm",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description",
+                            "type"
+                        ],
+                        "dropdown_box_values": {
+                            "type": ["int", "double", "string", "char[50]", "bool"]
+                        }
+                    },
+                    "statement": "What are the variable types of these input parameters?",
+                    "derivate_from": "input_parameters" 
+                },
+                {
+                    "name": "output_parameters_psm",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description",
+                            "type"
+                        ],
+                        "dropdown_box_values": {
+                            "type": ["int", "double", "string", "char[50]"]
+                        }
+                    },
+                    "statement": "What are the variable types of these output parameters?",
+                    "derivate_from": "output_parameters" 
+                },
+                {
+                    "name": "operation_modes",
+                    "statement": "What are the operation modes under which this action operates?",
+                    "hint": {
+                        "header": "These are the recommendations for the operation modes",
+                        "elements" : [
+                            "operation_modes_description" 
+                        ]
+                    },
+                    "conditional": {
+                        "operation_modes_enabled" :"true"
+                    },
+                    "parametersTable": {
+                        "headers": [
+                            "code",
+                            "name",
+                            "description"
+                        ],
+                        "sequence_values": {
+                            "code" : 0
+                        }
+                    }
+                    
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='operational_goal']",
+            "attributes": [
+                {
+                    "name": "operation_modes",
+                    "statement": "What are the operation modes under which this goal operates?",
+                    "hint": {
+                        "header": "These are the recommendations for the operation modes",
+                        "elements" : [
+                            "operation_modes_description" 
+                        ]
+                    },
+                    "conditional": {
+                        "operation_modes_enabled" :"true"
+                    },
+                    "parametersTable": {
+                        "headers": [
+                            "code",
+                            "name",
+                            "description"
+                        ],
+                        "sequence_values": {
+                            "code" : 0
+                        }
+                    }
+                    
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='hw_resource']",
+            "attributes": [
+                {
+                    "name": "integration_operation_description",
+                    "freeTextArea": true,
+                    "statement": "What is the way this hardware resource should be integrated and operated?",
+                    "hint": {
+                        "header": "These are the qualifications and contributions related to this resource",
+                        "elements" : [
+                            "qualification_array",
+                            "contribution_array" 
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='sw_resource']",
+            "attributes": [
+                {
+                    "name": "data_structure_psm",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description",
+                            "type"
+                        ],
+                        "dropdown_box_values": {
+                            "type": ["int", "double", "string", "char[50]", "bool"]
+                        }
+                    },
+                    "statement": "What are the variable types of this data structure?",
+                    "derivate_from": "data_structure" 
+                }
+            ]
+        }
+    ]
+}

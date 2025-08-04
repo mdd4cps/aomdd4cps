@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSLT Transformer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="horizontal-container">
+        <div class="vertical-container xsl-container">
+            <!-- Mode Preset selection -->
+            <div class="preset-container">
+                <h3>Select a Mode</h3>
+                <div>
+                    <label>
+                        <input type="radio" name="preset" value="cim-pim" id="cimPimPreset" checked> CIM->PIM
+                    </label>
+                    <label>
+                        <input type="radio" name="preset" value="pim-psm" id="pimPSMPreset"> PIM->PSM
+                    </label>
+                    <!--
+                    <label>
+                        <input type="radio" name="preset" value="custom" id="customPreset"> Custom
+                    </label>
+                    -->
+                </div>
+                
+            </div>
+            <!-- XSL Upload and List Section -->
+            <div class="xsl-area">
+                <div class="file-upload" id="xslFileUpload" style="display:none">
+                    <input type="file" id="xslFileInput" accept=".xsl, .xslt">
+                    <button onclick="document.getElementById('xslFileInput').click()">Upload XSL Transformation</button>
+                    <ul id="xslFileList" class="fileList"></ul> <!-- List to show uploaded XSL files -->
+                </div>
+                
+            </div>
+            <!-- Add JSON Upload Section -->
+            <div class="json-area">
+                <div class="file-upload" id="jsonFileUpload" style="display:none">
+                    <input type="file" id="jsonFileInput" accept=".json">
+                    <button onclick="document.getElementById('jsonFileInput').click()">Upload JSON Rules</button>
+                    <ul id="jsonFileList" class="fileList"></ul> <!-- List to show uploaded JSON files -->
+                </div>
+                <div class="button-container">
+                    <button class="apply-rules-btn" id="applyRulesBtn">Apply Rules</button>
+                </div>
+
+            </div>
+            <div class="psm-preset-area" id="psmAttributeArea">
+                <label for="platforms">Choose a Platform</label>
+                <select id="platforms" name="platforms">
+                  <option value="arduino">Arduino</option>
+                </select> 
+                <label for="commTechs">Choose a Communications Technology</label>
+                <select id="commTechs" name="commTechs">
+                  <option value="mqtt">MQTT</option>
+                </select> 
+            </div>
+
+        </div>
+        <div class="vertical-container xml-container">
+            <!-- XML Upload and Textarea Section -->
+            <div class="input-area">
+                <div class="file-upload">
+                    <input type="file" id="xmlFileInput" accept=".xml">
+                    <button onclick="document.getElementById('xmlFileInput').click()">Load Input XML</button>
+                </div>
+                <textarea id="inputXML" placeholder="Input XML" spellcheck="false"></textarea>
+            </div>
+            <!-- Transform Button -->
+            <button class="transform-btn" id="transformBtn">Transform</button>
+            <!-- Output XML Section -->
+            <div class="output-area">
+                <textarea id="outputXML" placeholder="Output XML" spellcheck="false" readonly></textarea>
+                <button class="download-btn" id="downloadBtn">Download Output XML</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal structure for the questionnaire -->
+    <div id="questionnaireModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id="questionnaireForm"></form> <!-- The form will be populated dynamically -->
+            <button class="modal-submit-button" type="button" id="submitAttributesBtn">Submit</button>
+        </div>
+    </div>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jsonProcessor.js') }}"></script>
+    
+</body>
+
+</html>

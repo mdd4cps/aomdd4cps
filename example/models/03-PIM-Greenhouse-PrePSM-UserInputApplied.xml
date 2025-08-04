@@ -1,0 +1,1559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:133.0) Gecko/20100101 Firefox/133.0" version="25.0.3">
+	<diagram name="Greenhouse monitoring system" id="eHetnX6oBnYGbTIQLsZm">
+		<mxGraphModel dx="2391" dy="1117" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+			<root>
+				<mxCell id="0"/>
+				<mxCell id="1" parent="0"/>
+				<object label="Monitor Greenhouse Temperature" type="operational_goal" id_cim_parent="cVOCU7CYytCJJ8tOkeac-16" id="cVOCU7CYytCJJ8tOkeac-16" name="Monitor Greenhouse Temperature" qualification_array="[]" contribution_array="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.  - Alto Consumo: Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta." interval_in_milliseconds="10000" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta.&quot;}]">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="140" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Collect Temperature Data" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-17" id="cVOCU7CYytCJJ8tOkeac-17" name="Collect Temperature Data" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;cVOCU7CYytCJJ8tOkeac-19&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;hurt&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.  - Alto Consumo: Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta." input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;,&quot;type&quot;:&quot;double&quot;}]" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta.&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Publish Temperature Data" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-26" id="cVOCU7CYytCJJ8tOkeac-26" name="Publish Temperature Data" input_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="57" y="316" width="109" height="43" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-27" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-27">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-26" target="cVOCU7CYytCJJ8tOkeac-16-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-27" type="and_ref_operator" id="cVOCU7CYytCJJ8tOkeac-16-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="129.2498514851485" y="200.85073061630223" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-27" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-16-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-16-operator-and_ref_operator" target="cVOCU7CYytCJJ8tOkeac-16">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-30" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-30">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-17" target="cVOCU7CYytCJJ8tOkeac-16-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Optimize Resources" type="operational_goal" id_cim_parent="cVOCU7CYytCJJ8tOkeac-20" id="cVOCU7CYytCJJ8tOkeac-20" name="Optimize Resources" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;cVOCU7CYytCJJ8tOkeac-19&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;help&quot;}]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="10000">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="274" y="239" width="110" height="110" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Analyze Battery Usage" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-22" id="cVOCU7CYytCJJ8tOkeac-22" name="Analyze Battery Usage" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="199.99970297029728" y="360.99646123260436" width="135.85" height="28.75" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-25" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-25">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-22" target="cVOCU7CYytCJJ8tOkeac-20-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-25" type="and_ref_operator" id="cVOCU7CYytCJJ8tOkeac-20-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="268.46235148514864" y="277.4357306163022" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-25" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-20-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-20-operator-and_ref_operator" target="cVOCU7CYytCJJ8tOkeac-20">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Temperature Sensor" type="hw_resource" id_cim_parent="cVOCU7CYytCJJ8tOkeac-18" id="cVOCU7CYytCJJ8tOkeac-18" name="Temperature Sensor" qualification_array="[]" contribution_array="[]" integration_operation_description="Se debe utilizar un sensor de temperatura DHT-11, para lo cual se debe incluir la librería correspondiente.">
+					
+					
+					<mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="549.9997029702972" y="105.99646123260435" width="101.56" height="39.99" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-29" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-29">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-18" target="cVOCU7CYytCJJ8tOkeac-17">
+						
+						
+						<mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+							
+							
+              
+							
+							<mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint"/>
+							
+							
+              
+							
+							<mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint"/>
+							
+							
+              
+							
+							<mxPoint as="offset"/>
+							
+							
+            
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Energy Mode" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-21" id="cVOCU7CYytCJJ8tOkeac-21" name="Change Energy Mode" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="414.9997029702972" y="354.37646123260436" width="108" height="42" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-24" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-24">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-21" target="cVOCU7CYytCJJ8tOkeac-20-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Temperature Monitor Component" type="cps_component" id_cim_parent="cVOCU7CYytCJJ8tOkeac-8" id="cVOCU7CYytCJJ8tOkeac-5" name="Temperature Monitor Component" description="Involucra un módulo que utiliza sensores para obtener datos de temperatura del invernadero que luego son comunicados a otros nodos de la red.">
+					
+					
+					<mxCell style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+						
+						
+						<mxGeometry x="1641" y="1025" width="888" height="511" as="geometry">
+							
+							
+							<mxRectangle x="44" width="49.05" height="44" as="alternateBounds"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Monitor Soil Moisture" type="operational_goal" id_cim_parent="cVOCU7CYytCJJ8tOkeac-33" id="cVOCU7CYytCJJ8tOkeac-33" name="Monitor Soil Moisture" qualification_array="[]" contribution_array="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.  - Alto Consumo: Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta." interval_in_milliseconds="10000" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta.&quot;}]">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="140" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Analyze Battery Usage" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-37" id="cVOCU7CYytCJJ8tOkeac-37" name="Analyze Battery Usage" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="207.99970297029728" y="367.99646123260436" width="135.85" height="28.75" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Publish Moisture Data" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-39" id="cVOCU7CYytCJJ8tOkeac-39" name="Publish Moisture Data" input_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="57" y="316" width="109" height="43" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-40" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-40">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-39" target="cVOCU7CYytCJJ8tOkeac-33-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-40" type="and_ref_operator" id="cVOCU7CYytCJJ8tOkeac-33-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="129.2498514851485" y="200.85073061630223" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-40" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-33-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-33-operator-and_ref_operator" target="cVOCU7CYytCJJ8tOkeac-33">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Optimize Resources" type="operational_goal" id_cim_parent="cVOCU7CYytCJJ8tOkeac-47" id="cVOCU7CYytCJJ8tOkeac-47" name="Optimize Resources" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;cVOCU7CYytCJJ8tOkeac-35&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;help&quot;}]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="10000">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="264" y="242" width="110" height="110" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-38" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-38">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-37" target="cVOCU7CYytCJJ8tOkeac-47-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-38" type="and_ref_operator" id="cVOCU7CYytCJJ8tOkeac-47-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="267.46235148514864" y="282.4357306163022" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-38" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-47-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-47-operator-and_ref_operator" target="cVOCU7CYytCJJ8tOkeac-47">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Soil Moisture Sensor" type="hw_resource" id_cim_parent="cVOCU7CYytCJJ8tOkeac-50" id="cVOCU7CYytCJJ8tOkeac-50" name="Soil Moisture Sensor" qualification_array="[]" contribution_array="[]" integration_operation_description="Se debe utilizar un sensor de temperatura DHT-11, para lo cual se debe incluir la librería correspondiente(dht.h).">
+					
+					
+					<mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="567.9997029702972" y="138.99646123260436" width="101.56" height="39.99" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Collect Soil Moisture Data" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-34" id="cVOCU7CYytCJJ8tOkeac-34" name="Collect Soil Moisture Data" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;cVOCU7CYytCJJ8tOkeac-35&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;hurt&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.  - Alto Consumo: Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta." input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;,&quot;type&quot;:&quot;double&quot;}]" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  bajo, lo cual implica la obtención de una sola muestra de temperatura  por ciclo, con una fiabilidad de muestra baja, pero con un consumo  mínimo de energía.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Depende de que la batería posea un nivel de energía  alto, lo cual implica un uso menos conservador de energía, y por lo  tanto una muestra más precisa promediando 10 mediciones consecutivas,  con una fiabilidad de muestra alta.&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="364.9997029702972" y="138.99646123260436" width="128.07" height="44.2" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-51" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-51">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-50" target="cVOCU7CYytCJJ8tOkeac-34">
+						
+						
+						<mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+							
+							
+              
+							
+							<mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint"/>
+							
+							
+              
+							
+							<mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint"/>
+							
+							
+              
+							
+							<mxPoint as="offset"/>
+							
+							
+            
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-42" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-42">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-34" target="cVOCU7CYytCJJ8tOkeac-33-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Energy Mode" type="action" id_cim_parent="cVOCU7CYytCJJ8tOkeac-36" id="cVOCU7CYytCJJ8tOkeac-36" name="Change Energy Mode" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="406.9997029702972" y="354.74646123260436" width="108" height="42" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="cVOCU7CYytCJJ8tOkeac-49" type="relation_from_to" id="cVOCU7CYytCJJ8tOkeac-49">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-36" target="cVOCU7CYytCJJ8tOkeac-47-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Soil Moisture Monitor Component" type="cps_component" id_cim_parent="cVOCU7CYytCJJ8tOkeac-45" id="cVOCU7CYytCJJ8tOkeac-32" name="Soil Moisture Monitor Component" description="Involucra un módulo que utiliza sensores para obtener datos de humedad del suelo de una planta que luego son comunicados a otros nodos de la red.">
+					
+					
+					<mxCell style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+						
+						
+						<mxGeometry x="1608" y="1589" width="888" height="511" as="geometry">
+							
+							
+							<mxRectangle x="44" width="49.05" height="44" as="alternateBounds"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Maintain Soil Moisture Levels" type="operational_goal" id_cim_parent="tc0aXw5la06j1g5yClUv-3" id="tc0aXw5la06j1g5yClUv-3" name="Maintain Soil Moisture Levels" qualification_array="[]" contribution_array="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel  promedio establecido para la especie, llegando al nivel promedio de  humedad.  - Alto Consumo: Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel  promdio establecido para la especie, de manera que se llegue al  promedio del rango óptimo de humedad." interval_in_milliseconds="10000" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel  promedio establecido para la especie, llegando al nivel promedio de  humedad.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel  promdio establecido para la especie, de manera que se llegue al  promedio del rango óptimo de humedad.&quot;}]">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="140" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Soil Moisture" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-4" id="tc0aXw5la06j1g5yClUv-4" name="Change Soil Moisture" input_parameters="[{&quot;name&quot;:&quot;Soil Moisture Reference Value&quot;,&quot;description&quot;:&quot;Nivel de humedad al cual se debería llegar.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;tc0aXw5la06j1g5yClUv-5&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;hurt&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel  promedio establecido para la especie, llegando al nivel promedio de  humedad.  - Alto Consumo: Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel  promdio establecido para la especie, de manera que se llegue al  promedio del rango óptimo de humedad." input_parameters_psm="[{&quot;name&quot;:&quot;Soil Moisture Reference Value&quot;,&quot;description&quot;:&quot;Nivel de humedad al cual se debería llegar.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel  promedio establecido para la especie, llegando al nivel promedio de  humedad.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Dependiendo de la planta configurada, se va accionar el  riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel  promdio establecido para la especie, de manera que se llegue al  promedio del rango óptimo de humedad.&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Analyze Battery Usage" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-7" id="tc0aXw5la06j1g5yClUv-7" name="Analyze Battery Usage" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="208.99970297029728" y="352.73646123260437" width="135.85" height="28.75" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Check Soil Moisture Levels" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-9" id="tc0aXw5la06j1g5yClUv-9" name="Check Soil Moisture Levels" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="57" y="316" width="109" height="43" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-10" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-10">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-9" target="tc0aXw5la06j1g5yClUv-3-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="tc0aXw5la06j1g5yClUv-10" type="and_ref_operator" id="tc0aXw5la06j1g5yClUv-3-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="129.2498514851485" y="200.85073061630223" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-10" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-3-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-3-operator-and_ref_operator" target="tc0aXw5la06j1g5yClUv-3">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-12" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-12">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-4" target="tc0aXw5la06j1g5yClUv-3-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="&lt;div&gt;Plant Waterer&lt;/div&gt;" type="hw_resource" id_cim_parent="tc0aXw5la06j1g5yClUv-20" id="tc0aXw5la06j1g5yClUv-20" name="&lt;div&gt;Plant Waterer&lt;/div&gt;" qualification_array="[]" contribution_array="[]" integration_operation_description="Este dispositivo corresponde a una válvula de agua controlada por un servo &#xA;motor e 180 grados, para lo cual se debe incluir la librería correspondiente(servo.h).">
+					
+					
+					<mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="487.9997029702972" y="41.99646123260436" width="101.56" height="39.99" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-21" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-21">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-20" target="tc0aXw5la06j1g5yClUv-4">
+						
+						
+						<mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+							
+							
+              
+							
+							<mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint"/>
+							
+							
+              
+							
+							<mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint"/>
+							
+							
+              
+							
+							<mxPoint as="offset"/>
+							
+							
+            
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Optimize Resources" type="operational_goal" id_cim_parent="tc0aXw5la06j1g5yClUv-17" id="tc0aXw5la06j1g5yClUv-17" name="Optimize Resources" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;tc0aXw5la06j1g5yClUv-5&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;help&quot;}]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="10000">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="277" y="236" width="110" height="110" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-8" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-8">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-7" target="tc0aXw5la06j1g5yClUv-17-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="tc0aXw5la06j1g5yClUv-8" type="and_ref_operator" id="tc0aXw5la06j1g5yClUv-17-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="274.46235148514864" y="271.8057306163022" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-8" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-17-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-17-operator-and_ref_operator" target="tc0aXw5la06j1g5yClUv-17">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Plant Configuration Pin" type="hw_resource" id_cim_parent="U5gbfCX47OS8Pz70eV5W-3" id="U5gbfCX47OS8Pz70eV5W-3" name="Plant Configuration Pin" qualification_array="[]" contribution_array="[]" integration_operation_description="Se utilizará un pin digital para seleccionar la especie en cultivo. 0 es &#xA;para tomate, y 1 para lechuga. Se debe implementar el conexionado &#xA;mediante dip switch para la selección.">
+					
+					
+					<mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="534.9997029702972" y="126.41646123260436" width="101.56" height="39.99" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="U5gbfCX47OS8Pz70eV5W-4" type="relation_from_to" id="U5gbfCX47OS8Pz70eV5W-4">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="U5gbfCX47OS8Pz70eV5W-3" target="tc0aXw5la06j1g5yClUv-4">
+						
+						
+						<mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+							
+							
+              
+							
+							<mxPoint x="537" y="135" as="sourcePoint"/>
+							
+							
+              
+							
+							<mxPoint x="488" y="136" as="targetPoint"/>
+							
+							
+              
+							
+							<mxPoint as="offset"/>
+							
+							
+            
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Energy Mode" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-6" id="tc0aXw5la06j1g5yClUv-6" name="Change Energy Mode" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="361.0297029702972" y="346.11646123260437" width="108" height="42" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-19" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-19">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-6" target="tc0aXw5la06j1g5yClUv-17-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Soil Moisture Actuator Component" type="cps_component" id_cim_parent="tc0aXw5la06j1g5yClUv-15" id="tc0aXw5la06j1g5yClUv-2" name="Soil Moisture Actuator Component" description="Involucra un módulo que utiliza un actuador de válvula controlada por un servo motor y cuya lógica de control depende del valor de humedad monitoreado  por otro nodo de la red y de la especie configurada para la planta.">
+					
+					
+					<mxCell style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+						
+						
+						<mxGeometry x="1639" y="2133" width="888" height="511" as="geometry">
+							
+							
+							<mxRectangle x="44" width="49.05" height="44" as="alternateBounds"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Maintain Greenhouse Temperature" type="operational_goal" id_cim_parent="tc0aXw5la06j1g5yClUv-25" id="tc0aXw5la06j1g5yClUv-25" name="Maintain Greenhouse Temperature" qualification_array="[]" contribution_array="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 10% del promedio de temperatura ideal, de  manera que se produzcan menos accionamientos en un periodo dado.  - Alto Consumo: Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 1% del promedio de temperatura ideal, de manera  que se produzcan más accionamientos en un periodo dado para una  regulación de temperatura más precisa y estable." interval_in_milliseconds="10000" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 10% del promedio de temperatura ideal, de  manera que se produzcan menos accionamientos en un periodo dado.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 1% del promedio de temperatura ideal, de manera  que se produzcan más accionamientos en un periodo dado para una  regulación de temperatura más precisa y estable.&quot;}]">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="140" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Greenhouse Temperature" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-26" id="tc0aXw5la06j1g5yClUv-26" name="Change Greenhouse Temperature" input_parameters="[{&quot;name&quot;:&quot;Temperature Reference Value&quot;,&quot;description&quot;:&quot;Temperatura a la cual se debería llegar.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;tc0aXw5la06j1g5yClUv-27&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;hurt&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados. - Bajo consumo: Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 10% del promedio de temperatura ideal, de  manera que se produzcan menos accionamientos en un periodo dado.  - Alto Consumo: Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 1% del promedio de temperatura ideal, de manera  que se produzcan más accionamientos en un periodo dado para una  regulación de temperatura más precisa y estable." input_parameters_psm="[{&quot;name&quot;:&quot;Temperature Reference Value&quot;,&quot;description&quot;:&quot;Temperatura a la cual se debería llegar.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]" operation_modes="[{&quot;code&quot;:&quot;0&quot;,&quot;name&quot;:&quot;Bajo consumo&quot;,&quot;description&quot;:&quot;Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 10% del promedio de temperatura ideal, de  manera que se produzcan menos accionamientos en un periodo dado.&quot;},{&quot;code&quot;:&quot;1&quot;,&quot;name&quot;:&quot;Alto Consumo&quot;,&quot;description&quot;:&quot;Se va accionar el calefactor cuando la temperatura del  invernadero disminuya un 1% del promedio de temperatura ideal, de manera  que se produzcan más accionamientos en un periodo dado para una  regulación de temperatura más precisa y estable.&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Change Energy Mode" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-28" id="tc0aXw5la06j1g5yClUv-28" name="Change Energy Mode" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]" output_parameters_psm="[]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="432.9997029702972" y="353.99646123260436" width="108" height="42" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Check Greenhouse Temperature" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-31" id="tc0aXw5la06j1g5yClUv-31" name="Check Greenhouse Temperature" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="57" y="316" width="109" height="43" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-32" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-32">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-31" target="tc0aXw5la06j1g5yClUv-25-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="tc0aXw5la06j1g5yClUv-32" type="and_ref_operator" id="tc0aXw5la06j1g5yClUv-25-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="129.2498514851485" y="200.85073061630223" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-32" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-25-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-25-operator-and_ref_operator" target="tc0aXw5la06j1g5yClUv-25">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-34" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-34">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-26" target="tc0aXw5la06j1g5yClUv-25-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Analyze Battery Usage" type="action" id_cim_parent="tc0aXw5la06j1g5yClUv-29" id="tc0aXw5la06j1g5yClUv-29" name="Analyze Battery Usage" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" input_parameters_psm="[]" output_parameters_psm="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="192.99970297029728" y="383.24646123260436" width="135.85" height="28.75" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Optimize Resources" type="operational_goal" id_cim_parent="tc0aXw5la06j1g5yClUv-39" id="tc0aXw5la06j1g5yClUv-39" name="Optimize Resources" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;tc0aXw5la06j1g5yClUv-27&quot;, &quot;name&quot;: &quot;Resource Efficiency&quot;, &quot;contribution&quot;: &quot;help&quot;}]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="10000">
+					
+					
+					<mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="274" y="241" width="110" height="110" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-41" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-41">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-28" target="tc0aXw5la06j1g5yClUv-39-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="AND" name="" id_cim_parent="tc0aXw5la06j1g5yClUv-41" type="and_ref_operator" id="tc0aXw5la06j1g5yClUv-39-operator-and_ref_operator">
+					
+					
+					<mxCell style="shape=or;whiteSpace=wrap;html=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="377.9998514851486" y="278.2482306163022" width="60" height="80" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-41" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-39-targetRelationshipand_ref_operator">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-39-operator-and_ref_operator" target="tc0aXw5la06j1g5yClUv-39">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-30" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-30">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-29" target="tc0aXw5la06j1g5yClUv-39-operator-and_ref_operator">
+						
+						
+						<mxGeometry width="50" height="50" relative="1" as="geometry">
+							
+							
+							<mxPoint x="0" y="0" as="sourcePoint"/>
+							
+							
+							<mxPoint x="0" y="0" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Greenhouse Heater" type="hw_resource" id_cim_parent="tc0aXw5la06j1g5yClUv-42" id="tc0aXw5la06j1g5yClUv-42" name="Greenhouse Heater" qualification_array="[]" contribution_array="[]" integration_operation_description="Este dispositivo corresponde a un calefactor que es controlado mediante un &#xA;relé via señal digital desde el CPC. Se debe implementar el conexionado &#xA;mediante protoboard.">
+					
+					
+					<mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="498.9997029702972" y="51.99646123260435" width="101.56" height="39.99" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" id_cim_parent="tc0aXw5la06j1g5yClUv-43" type="relation_from_to" id="tc0aXw5la06j1g5yClUv-43">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-42" target="tc0aXw5la06j1g5yClUv-26">
+						
+						
+						<mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+							
+							
+              
+							
+							<mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint"/>
+							
+							
+              
+							
+							<mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint"/>
+							
+							
+              
+							
+							<mxPoint as="offset"/>
+							
+							
+            
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="Temperature Actuator Component" type="cps_component" id_cim_parent="tc0aXw5la06j1g5yClUv-37" id="tc0aXw5la06j1g5yClUv-24" name="Temperature Actuator Component" description="Involucra un módulo que utiliza un actuador de calefactor para el  invernadero(accionado a través de una señal digital) y cuya lógica de  control depende del valor de temperatura del invernadero monitoreado por otro nodo de la red.">
+					
+					
+					<mxCell style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+						
+						
+						<mxGeometry x="1589" y="473" width="888" height="511" as="geometry">
+							
+							
+							<mxRectangle x="44" width="49.05" height="44" as="alternateBounds"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object type="listener_thread" label="Soil Moisture Data - Listener Thread" id="tc0aXw5la06j1g5yClUv-50-listener_thread" name="Soil Moisture Data - Listener Thread" id_cim_parent="tc0aXw5la06j1g5yClUv-50" id_cim_type="task" cim_dependerElmnt_is_softgoal="false" ifsg_softgoal_id="" ifsg_softgoal_name="" qualification_array="" contribution_array="">
+					
+					
+					<mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipV=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-2">
+						
+						
+						<mxGeometry x="155.4000000000001" y="157" width="120" height="60" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object type="comm_thread" label="Soil Moisture Data - Comm Thread" id="tc0aXw5la06j1g5yClUv-50-comm_thread" name="Soil Moisture Data - Comm Thread" id_cim_parent="tc0aXw5la06j1g5yClUv-50" id_cim_type="task" cim_dependeeElmnt_is_softgoal="false" ifsg_softgoal_id="" ifsg_softgoal_name="" qualification_array="" contribution_array="" dependum_data_structure="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" operation_modes_description="" data_structure_psm="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipH=0;flipV=0;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-32">
+						
+						
+						<mxGeometry x="155.4000000000001" y="421.57500000000005" width="120" height="60" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-50-comm_relation" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="tc0aXw5la06j1g5yClUv-50-comm_thread" target="tc0aXw5la06j1g5yClUv-50-listener_thread">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-50-mail_symbol" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-50-comm_relation">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-50-comm_relation_dependee" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-39" target="tc0aXw5la06j1g5yClUv-50-comm_thread">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-50-mail_symbol_dependee" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-50-comm_relation_dependee">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-50-comm_relation_depender" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-50-listener_thread" target="tc0aXw5la06j1g5yClUv-9">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-50-mail_symbol_depender" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-50">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-50-comm_relation_depender">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object type="listener_thread" label="Temperature Data - Listener Thread" id="tc0aXw5la06j1g5yClUv-51-listener_thread" name="Temperature Data - Listener Thread" id_cim_parent="tc0aXw5la06j1g5yClUv-51" id_cim_type="task" cim_dependerElmnt_is_softgoal="false" ifsg_softgoal_id="" ifsg_softgoal_name="" qualification_array="" contribution_array="">
+					
+					
+					<mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipV=1;" vertex="1" parent="tc0aXw5la06j1g5yClUv-24">
+						
+						
+						<mxGeometry x="155.4000000000001" y="421.57500000000005" width="120" height="60" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object type="comm_thread" label="Temperature Data - Comm Thread" id="tc0aXw5la06j1g5yClUv-51-comm_thread" name="Temperature Data - Comm Thread" id_cim_parent="tc0aXw5la06j1g5yClUv-51" id_cim_type="task" cim_dependeeElmnt_is_softgoal="false" ifsg_softgoal_id="" ifsg_softgoal_name="" qualification_array="" contribution_array="" dependum_data_structure="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" operation_modes_description="" data_structure_psm="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;,&quot;type&quot;:&quot;double&quot;}]">
+					
+					
+					<mxCell style="shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipH=0;flipV=0;" vertex="1" parent="cVOCU7CYytCJJ8tOkeac-5">
+						
+						
+						<mxGeometry x="155.4000000000001" y="89.42499999999995" width="120" height="60" as="geometry"/>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-51-comm_relation" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="tc0aXw5la06j1g5yClUv-51-comm_thread" target="tc0aXw5la06j1g5yClUv-51-listener_thread">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-51-mail_symbol" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-51-comm_relation">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-51-comm_relation_dependee" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-26" target="tc0aXw5la06j1g5yClUv-51-comm_thread">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-51-mail_symbol_dependee" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-51-comm_relation_dependee">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object label="" type="comm_relation" id="tc0aXw5la06j1g5yClUv-51-comm_relation_depender" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="endArrow=classic;html=1;rounded=0;" edge="1" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-51-listener_thread" target="tc0aXw5la06j1g5yClUv-31">
+						
+						
+						<mxGeometry relative="1" as="geometry">
+							
+							
+							<mxPoint x="230" y="580" as="sourcePoint"/>
+							
+							
+							<mxPoint x="210" y="400" as="targetPoint"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+				<object id="tc0aXw5la06j1g5yClUv-51-mail_symbol_depender" type="mail_symbol" id_cim_parent="tc0aXw5la06j1g5yClUv-51">
+					
+					
+					<mxCell style="shape=message;html=1;outlineConnect=0;" vertex="1" parent="tc0aXw5la06j1g5yClUv-51-comm_relation_depender">
+						
+						
+						<mxGeometry width="20" height="14" relative="1" as="geometry">
+							
+							
+							<mxPoint x="-10" y="-7" as="offset"/>
+							
+						
+						</mxGeometry>
+						
+					
+					</mxCell>
+					
+				
+				</object>
+			</root>
+		</mxGraphModel>
+	</diagram>
+</mxfile>

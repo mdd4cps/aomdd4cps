@@ -1,0 +1,154 @@
+{
+    "modifications": [
+        {
+            "xpath": "//object[@type='agent' or @type='role' or @type='actor']",
+            "attributes": [
+                {
+                    "name": "is_a_cpc",
+                    "options": [
+                        "true",
+                        "false"
+                    ],
+                    "statement": "Is this element a Cyber Physical Component(CPC)?",
+                    "additionalAttribute": {
+                        "conditional": "true",
+                        "attribute": {
+                            "name": "description",
+                            "freeTextArea": true,
+                            "statement": "Why is it a CPC?"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='goal' and not(mxCell/@parent='1')]",
+            "attributes": [
+                {
+                    "name": "interval_in_milliseconds",
+                    "number": true,
+                    "statement": "What's the frequency this goal gets checked for success(in miliseconds)?"
+                },
+                {
+                    "name": "operation_modes_enabled",
+                    "options": [
+                        "false",
+                        "true"
+                    ],
+                    "statement": "Does the goal operate with discrete operation modes?",
+                    "additionalAttribute": {
+                        "conditional": "true",
+                        "attribute": {
+                            "name": "operation_modes_description",
+                            "freeTextArea": true,
+                            "statement": "Please describe the operational modes"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "xpath": "//object[@type='resource' and not(mxCell/@parent='1')]",
+            "attributes": [
+                {
+                    "name": "resource_type",
+                    "options": [
+                        "software",
+                        "hardware"
+                    ],
+                    "statement": "What type of resource is this?",
+                    "additionalAttribute": {
+                        "conditional": "software",
+                        "attribute": {
+                            "name": "data_structure",
+                            "parametersTable": {
+                                "headers": [
+                                    "name",
+                                    "description"
+                                ]
+                            },
+                            "statement": "What are the variables for the data structure of this software resource?"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "xpath": "//object[(@type='task') and not(mxCell/@parent='1')]",
+            "attributes": [
+                {
+                    "name": "input_parameters",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description"
+                        ]
+                    },
+                    "statement": "What are the input parameters for this task?"
+                },
+                {
+                    "name": "output_parameters",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description"
+                        ]
+                    },
+                    "statement": "What are the output parameters for this task?"
+                },
+                {
+                    "name": "operation_modes_enabled",
+                    "options": [
+                        "false",
+                        "true"
+                    ],
+                    "statement": "Does the task operate with discrete operation modes?",
+                    "additionalAttribute": {
+                        "conditional": "true",
+                        "attribute": {
+                            "name": "operation_modes_description",
+                            "freeTextArea": true,
+                            "statement": "Please describe the operational modes"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "xpath": "//object[(@type='resource' or @type='softgoal' or @type='goal' or @type='task') and (mxCell/@parent='1')]",
+            "attributes": [
+                {
+                    "name": "dependum_data_structure",
+                    "parametersTable": {
+                        "headers": [
+                            "name",
+                            "description"
+                        ]
+                    },
+                    "statement": "What's the data structure of this dependum?"
+                },
+                {
+                    "name": "interval_in_milliseconds",
+                    "number": true,
+                    "statement": "What's the frequency of the communications between the dependee and depender(in milliseconds)?"
+                },
+                {
+                    "name": "operation_modes_enabled",
+                    "options": [
+                        "false",
+                        "true"
+                    ],
+                    "statement": "Does the communication require discrete operation modes?",
+                    "additionalAttribute": {
+                        "conditional": "true",
+                        "attribute": {
+                            "name": "operation_modes_description",
+                            "freeTextArea": true,
+                            "statement": "Please describe the operation modes"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

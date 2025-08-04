@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - SAXONC_HOME=/opt/SaxonC
+    ports:
+      - "3000:3000"
+    expose:
+      - "3000"
+    networks:
+      - flask_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    expose:
+      - "5000"
+    networks:
+      - flask_network
+    depends_on:
+      - backend
+
+networks:
+  flask_network:
+    driver: bridge
+

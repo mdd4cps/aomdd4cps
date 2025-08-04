@@ -1,0 +1,79 @@
+<mxlibrary>[
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"cp component\" type=\"cps_component\" id_cim_parent=\"\" name=\"\" description=\"\" id=\"2\"&gt;&lt;mxCell style=\"swimlane;whiteSpace=wrap;html=1;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"155\" height=\"99\" as=\"geometry\"&gt;&lt;mxRectangle x=\"44\" width=\"49.05\" height=\"44\" as=\"alternateBounds\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 155,
+    "h": 99,
+    "aspect": "fixed",
+    "title": "cyber-physical component"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"on interval action\" type=\"operational_goal\" id_cim_parent=\"\" name=\"\" qualification_array=\"[]\" contribution_array=\"[]\" operation_modes_enabled=\"false\" operation_modes_description=\"\" interval_in_milliseconds=\"\" id=\"2\"&gt;&lt;mxCell style=\"ellipse;whiteSpace=wrap;html=1;aspect=fixed;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"87\" height=\"87\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 87,
+    "h": 87,
+    "aspect": "fixed",
+    "title": "on interval action"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"on demand action\" type=\"action\" id_cim_parent=\"\" name=\"\" input_parameters=\"[]\" output_parameters=\"[]\" qualification_array=\"[]\" contribution_array=\"[]\" operation_modes_enabled=\"false\" operation_modes_description=\"\" id=\"2\"&gt;&lt;mxCell style=\"rounded=0;whiteSpace=wrap;html=1;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"92\" height=\"43.1\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 92,
+    "h": 43.1,
+    "aspect": "fixed",
+    "title": "on demand action"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"software resource\" type=\"sw_resource\" id_cim_parent=\"\" name=\"\" qualification_array=\"[]\" contribution_array=\"[]\" data_structure=\"[]\" id=\"2\"&gt;&lt;mxCell style=\"shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"86\" height=\"64\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 86,
+    "h": 64,
+    "aspect": "fixed",
+    "title": "software resource"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"hardware resource\" type=\"hw_resource\" id_cim_parent=\"\" name=\"\" qualification_array=\"[]\" contribution_array=\"[]\" id=\"2\"&gt;&lt;mxCell style=\"verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"101.56\" height=\"53\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 101.56,
+    "h": 53,
+    "aspect": "fixed",
+    "title": "hardware resource"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"AND\" name=\"\" id_cim_parent=\"\" type=\"and_ref_operator\" id=\"2\"&gt;&lt;mxCell style=\"shape=or;whiteSpace=wrap;html=1;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"46\" height=\"60\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 46,
+    "h": 60,
+    "aspect": "fixed",
+    "title": "AND refinement"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"OR\" id_cim_parent=\"\" name=\"\" type=\"or_ref_operator\" id=\"2\"&gt;&lt;mxCell style=\"shape=xor;whiteSpace=wrap;html=1;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"46\" height=\"60\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 46,
+    "h": 60,
+    "aspect": "fixed",
+    "title": "OR refinement"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"\" id_cim_parent=\"\" type=\"relation_from_to\" id=\"2\"&gt;&lt;mxCell style=\"endArrow=classic;html=1;rounded=0;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"50\" height=\"50\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint y=\"0.5\" as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"55\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 55,
+    "h": 1,
+    "aspect": "fixed",
+    "title": "from-to relation"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object label=\"\" type=\"comm_relation\" id_cim_parent=\"\" id=\"2\"&gt;&lt;mxCell style=\"endArrow=classic;html=1;rounded=0;\" edge=\"1\" parent=\"1\"&gt;&lt;mxGeometry relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint as=\"sourcePoint\"/&gt;&lt;mxPoint x=\"69\" as=\"targetPoint\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;object type=\"mail_symbol\" id_cim_parent=\"tc0aXw5la06j1g5yClUv-51\" id=\"3\"&gt;&lt;mxCell style=\"shape=message;html=1;outlineConnect=0;\" vertex=\"1\" parent=\"2\"&gt;&lt;mxGeometry width=\"20\" height=\"14\" relative=\"1\" as=\"geometry\"&gt;&lt;mxPoint x=\"-10\" y=\"-7\" as=\"offset\"/&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 69,
+    "h": 1,
+    "aspect": "fixed",
+    "title": "from-to message"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object type=\"comm_thread\" label=\"message sender\" name=\"\" id_cim_parent=\"\" id_cim_type=\"\" cim_dependeeElmnt_is_softgoal=\"false\" ifsg_softgoal_id=\"\" ifsg_softgoal_name=\"\" qualification_array=\"\" contribution_array=\"\" dependum_data_structure=\"[]\" interval_in_milliseconds=\"\" operation_modes_enabled=\"false\" operation_modes_description=\"\" id=\"2\"&gt;&lt;mxCell style=\"shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipH=0;flipV=0;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry width=\"132\" height=\"43\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 132,
+    "h": 43,
+    "aspect": "fixed",
+    "title": "message sender"
+  },
+  {
+    "xml": "&lt;mxGraphModel&gt;&lt;root&gt;&lt;mxCell id=\"0\"/&gt;&lt;mxCell id=\"1\" parent=\"0\"/&gt;&lt;object type=\"listener_thread\" label=\"message receiver\" name=\"\" id_cim_parent=\"\" id_cim_type=\"\" cim_dependerElmnt_is_softgoal=\"false\" ifsg_softgoal_id=\"\" ifsg_softgoal_name=\"\" qualification_array=\"\" contribution_array=\"\" id=\"2\"&gt;&lt;mxCell style=\"shape=trapezoid;perimeter=trapezoidPerimeter;whiteSpace=wrap;html=1;fixedSize=1;flipV=1;\" vertex=\"1\" parent=\"1\"&gt;&lt;mxGeometry y=\"8.526512829121202e-14\" width=\"132\" height=\"43\" as=\"geometry\"/&gt;&lt;/mxCell&gt;&lt;/object&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;",
+    "w": 132,
+    "h": 43,
+    "aspect": "fixed",
+    "title": "message receiver"
+  }
+]</mxlibrary>

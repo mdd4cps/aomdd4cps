@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.11">
+  <diagram name="Greenhouse monitoring system" id="eHetnX6oBnYGbTIQLsZm">
+    <mxGraphModel dx="1674" dy="749" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="" type="boundary" id="b_b95VF1LTJlwQwtALbD-8">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="300" y="806" width="690" height="490" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="b_b95VF1LTJlwQwtALbD-9">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="b_b95VF1LTJlwQwtALbD-8" vertex="1">
+            <mxGeometry x="108.06356784267912" width="581.9364321573208" height="490" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="" id="b_b95VF1LTJlwQwtALbD-11">
+          <mxCell style="group;allowArrows=0;" parent="b_b95VF1LTJlwQwtALbD-9" connectable="0" vertex="1">
+            <mxGeometry x="-94.12254200769375" y="45.462386754139324" width="196.47921425941655" height="178.18181818181816" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Administrator" type="role" is_a_cpc="false" id="b_b95VF1LTJlwQwtALbD-12">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="b_b95VF1LTJlwQwtALbD-11" vertex="1">
+            <mxGeometry x="18.06" y="104.99574726609963" width="73.18451275150711" height="73.18451275150711" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="b_b95VF1LTJlwQwtALbD-13" value="" style="endArrow=none;html=1;startSize=9;endSize=6;sourcePerimeterSpacing=0;jumpStyle=none;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#004C99;rounded=0;fontSize=12;" parent="b_b95VF1LTJlwQwtALbD-11" source="b_b95VF1LTJlwQwtALbD-12" target="b_b95VF1LTJlwQwtALbD-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-216.12713568535824" y="-69.04545454545455" as="sourcePoint" />
+            <mxPoint x="-93.32762677322287" y="-180.4090909090909" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="98.23960712970828" y="175.95454545454544" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="owns" id="b_b95VF1LTJlwQwtALbD-10">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;exitX=0.95;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=12;" parent="b_b95VF1LTJlwQwtALbD-9" source="b_b95VF1LTJlwQwtALbD-12" target="b_b95VF1LTJlwQwtALbD-9" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-214.137098026662" y="166.80319474536802" as="sourcePoint" />
+              <mxPoint x="-1809.1558532793852" y="233.37359792924934" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Take Care of Plants" type="goal" interval_in_milliseconds="200" operation_modes_enabled="false" id="b_b95VF1LTJlwQwtALbD-52">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="b_b95VF1LTJlwQwtALbD-9" vertex="1">
+            <mxGeometry x="93" y="197.07" width="159.97" height="40.93" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;Check Plant Health&lt;/div&gt;" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="b_b95VF1LTJlwQwtALbD-56">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="b_b95VF1LTJlwQwtALbD-9" vertex="1">
+            <mxGeometry x="311" y="259.59" width="112" height="43.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="b_b95VF1LTJlwQwtALbD-58">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="b_b95VF1LTJlwQwtALbD-9" source="b_b95VF1LTJlwQwtALbD-56" target="b_b95VF1LTJlwQwtALbD-52" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="325.9364321573209" y="286.37910085054676" as="sourcePoint" />
+              <mxPoint x="465.9364321573209" y="286.37910085054676" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Check Manually" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="b_b95VF1LTJlwQwtALbD-63">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="b_b95VF1LTJlwQwtALbD-9" vertex="1">
+            <mxGeometry x="455.94" y="288.76" width="79.06" height="33.24" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Check Automated System" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="b_b95VF1LTJlwQwtALbD-64">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="b_b95VF1LTJlwQwtALbD-9" vertex="1">
+            <mxGeometry x="344.94" y="339.37" width="79.06" height="64.63" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="or" id="b_b95VF1LTJlwQwtALbD-65">
+          <mxCell style="endArrow=block;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="b_b95VF1LTJlwQwtALbD-9" source="b_b95VF1LTJlwQwtALbD-63" target="b_b95VF1LTJlwQwtALbD-56" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="281.9364321573209" y="216.71931956257595" as="sourcePoint" />
+              <mxPoint x="421.9364321573209" y="216.71931956257595" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="or" id="b_b95VF1LTJlwQwtALbD-66">
+          <mxCell style="endArrow=block;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="b_b95VF1LTJlwQwtALbD-9" source="b_b95VF1LTJlwQwtALbD-64" target="b_b95VF1LTJlwQwtALbD-56" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="281.9364321573209" y="216.71931956257595" as="sourcePoint" />
+              <mxPoint x="421.9364321573209" y="216.71931956257595" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="EhskmBOlh9XUoAK4D_Mz-2">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="251" y="1412" width="991" height="473" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="owns" id="EhskmBOlh9XUoAK4D_Mz-3">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;rounded=0;" parent="EhskmBOlh9XUoAK4D_Mz-2" source="EhskmBOlh9XUoAK4D_Mz-5" target="EhskmBOlh9XUoAK4D_Mz-4" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-2573.1184556261146" y="300.36928386540114" as="sourcePoint" />
+              <mxPoint x="-2443.16297806924" y="225.27696289905091" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="EhskmBOlh9XUoAK4D_Mz-4">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="EhskmBOlh9XUoAK4D_Mz-2" vertex="1">
+            <mxGeometry x="155.20434164071742" width="835.7956583592826" height="473" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Monitor Greenhouse" type="goal" interval_in_milliseconds="200" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-6">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="381.7953613295796" y="236.99646123260436" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Keep user informed" type="goal" interval_in_milliseconds="200" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-18">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="275.79536132957963" y="337.99646123260436" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Display data" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-16">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="156.80000000000007" y="179" width="134.2" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="EhskmBOlh9XUoAK4D_Mz-20">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-16" target="EhskmBOlh9XUoAK4D_Mz-18" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="218.79565835928258" y="194" as="sourcePoint" />
+              <mxPoint x="358.7956583592826" y="194" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="EhskmBOlh9XUoAK4D_Mz-21">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-6" target="EhskmBOlh9XUoAK4D_Mz-18" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="218.79565835928258" y="194" as="sourcePoint" />
+              <mxPoint x="358.7956583592826" y="194" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Store Plant Data" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-22">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="327.80000000000007" y="150" width="134.2" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="EhskmBOlh9XUoAK4D_Mz-23">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-22" target="EhskmBOlh9XUoAK4D_Mz-6" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="218.79565835928258" y="94" as="sourcePoint" />
+              <mxPoint x="358.7956583592826" y="94" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Check Soil Moisture Data" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-7">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="624.8000000000001" y="287" width="134.2" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="EhskmBOlh9XUoAK4D_Mz-19">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-7" target="EhskmBOlh9XUoAK4D_Mz-6" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="218.79565835928258" y="194" as="sourcePoint" />
+              <mxPoint x="358.7956583592826" y="194" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Plant Information Database" type="resource" resource_type="software" data_structure="[]" id="EhskmBOlh9XUoAK4D_Mz-24">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="255.8" y="52" width="89.2" height="53" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="EhskmBOlh9XUoAK4D_Mz-25">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-24" target="EhskmBOlh9XUoAK4D_Mz-22" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="218.79565835928258" y="94" as="sourcePoint" />
+              <mxPoint x="358.7956583592826" y="94" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="U5gbfCX47OS8Pz70eV5W-1">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="EhskmBOlh9XUoAK4D_Mz-24" target="EhskmBOlh9XUoAK4D_Mz-16" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="383" y="89" as="sourcePoint" />
+              <mxPoint x="400" y="160" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Check Plant Temperature Data" type="task" input_parameters="[]" output_parameters="[]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-45">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-4" vertex="1">
+            <mxGeometry x="581.8000000000001" y="172" width="134.2" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-46">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;" parent="EhskmBOlh9XUoAK4D_Mz-4" source="tc0aXw5la06j1g5yClUv-45" target="EhskmBOlh9XUoAK4D_Mz-6" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="363" y="141" as="sourcePoint" />
+              <mxPoint x="519" y="216" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Middleware Platform" type="actor" is_a_cpc="false" id="EhskmBOlh9XUoAK4D_Mz-5">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="EhskmBOlh9XUoAK4D_Mz-2" vertex="1">
+            <mxGeometry x="91.71" y="73.1" width="112.9" height="112.9" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Latest Plant Health Data" type="resource" dependum_data_structure="[]" interval_in_milliseconds="200" operation_modes_enabled="false" id="EhskmBOlh9XUoAK4D_Mz-26">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="446" y="1312" width="104" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="EhskmBOlh9XUoAK4D_Mz-28">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="EhskmBOlh9XUoAK4D_Mz-26" target="EhskmBOlh9XUoAK4D_Mz-16" edge="1">
+            <mxGeometry x="0.0403" y="-6" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="722" y="1231" as="sourcePoint" />
+              <mxPoint x="668" y="1231" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <mxCell id="EhskmBOlh9XUoAK4D_Mz-29" value="Ask the professor about the actuators in this, I assume the watering system could be related to some goals in the Plant monitor, but I&#39;m not sure" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+          <mxGeometry x="404" y="382" width="198" height="139" as="geometry" />
+        </mxCell>
+        <mxCell id="cQbT-bl7iRt3fUqLaNQC-1" value="&lt;div&gt;Implement timing(seconds) and Quality of Service(minimal, optimal, maximum, etc)&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+          <mxGeometry x="629" y="301" width="198" height="139" as="geometry" />
+        </mxCell>
+        <object label="" type="boundary" id="cVOCU7CYytCJJ8tOkeac-4">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="1641" y="1025" width="888" height="511" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="cVOCU7CYytCJJ8tOkeac-5">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="cVOCU7CYytCJJ8tOkeac-4" vertex="1">
+            <mxGeometry x="38" y="4" width="850" height="507" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Monitor Greenhouse Temperature" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Depende de que la batería posea un nivel de energía &#xa;bajo, lo cual implica la obtención de una sola muestra de temperatura &#xa;por ciclo, con una fiabilidad de muestra baja, pero con un consumo &#xa;mínimo de energía.&#xa;&#xa;- Alto Consumo: Depende de que la batería posea un nivel de energía &#xa;alto, lo cual implica un uso menos conservador de energía, y por lo &#xa;tanto una muestra más precisa promediando 10 mediciones consecutivas, &#xa;con una fiabilidad de muestra alta." id="cVOCU7CYytCJJ8tOkeac-16">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Collect Temperature Data" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Depende de que la batería posea un nivel de energía &#xa;bajo, lo cual implica la obtención de una sola muestra de temperatura &#xa;por ciclo, con una fiabilidad de muestra baja, pero con un consumo &#xa;mínimo de energía.&#xa;&#xa;- Alto Consumo: Depende de que la batería posea un nivel de energía &#xa;alto, lo cual implica un uso menos conservador de energía, y por lo &#xa;tanto una muestra más precisa promediando 10 mediciones consecutivas, &#xa;con una fiabilidad de muestra alta." id="cVOCU7CYytCJJ8tOkeac-17">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Resource Efficiency" type="softgoal" id="cVOCU7CYytCJJ8tOkeac-19">
+          <mxCell style="shape=stencil(7ZjbboMwDIafJpeVcoC2u5zY9h4pTdeslCCgp7dfmhC0uJSewsUkpApkO3E+bPMLFbGkWvNCIIrXiH0gSiOsL9o8WHPemLwqRFpb356Xki8ycY6wT4Tfdfz8Y0mq8lwvkyqvvMifeFWXXOa1to82G4nsCSdrTq1ViFJuRS3KZpH1Ivp1d17q56XB8r55eeNQeSOfl+BQieOBgKcDFXg20EDMY583WIFn2EvMomAVBonnwUbCLwULN8SAOFiN6VDEdKgak6GmYvLKHLNEe67JNEsWPN18l2qXLztxCl6vOwIuvFV7gW4Ie/eTts+7K20K4uc4Ul/UjwyIMfEOObnljck86XsMwR3hECKAEAOE2Edox+AVhhgwTAFDK5ndDKAMT3ViBjrh1LRFwKi3E6AM7nV4EAKDOmAfotU14p/iKNzb3VI8143Yp4gABYUUoB0M1uK5uQQUFFAQfIMC1uKpjhDQkQkYCwImE3YEzsV9s5mpSlxdZSTuQqmM94q8sWSlStGjeyuZZVqH1abvVLvgIJf6ZP39bO73aHwmc/GjZK4tczN7mjrf2pfyQhvnq9lln6B31yjho4SPEj5K+D+UcF9oOzabbRdSbrz2Xw7j+AU=);whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="540.9997029702972" y="279.99646123260436" width="155.78" height="53.49" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Publish Temperature Data" type="task" input_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-26">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="57" y="316" width="109" height="43" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-27">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-26" target="cVOCU7CYytCJJ8tOkeac-16" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-991.000297029703" y="447.99646123260436" as="sourcePoint" />
+              <mxPoint x="-967.000297029703" y="211.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hurt" type="contribution" value="hurt" id="cVOCU7CYytCJJ8tOkeac-28">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-17" target="cVOCU7CYytCJJ8tOkeac-19" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-732.000297029703" y="249.99646123260436" as="sourcePoint" />
+              <mxPoint x="-538.000297029703" y="384.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-30">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-17" target="cVOCU7CYytCJJ8tOkeac-16" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-729.000297029703" y="96.99646123260436" as="sourcePoint" />
+              <mxPoint x="-908.000297029703" y="166.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Optimize Resources" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-20">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="274" y="239" width="110" height="41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="help" type="contribution" value="help" id="cVOCU7CYytCJJ8tOkeac-23">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-20" target="cVOCU7CYytCJJ8tOkeac-19" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-773.000297029703" y="361.99646123260436" as="sourcePoint" />
+              <mxPoint x="-577.000297029703" y="396.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Analyze Battery Usage" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-22">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="199.99970297029728" y="360.99646123260436" width="135.85" height="28.75" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-25">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-22" target="cVOCU7CYytCJJ8tOkeac-20" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-633" y="558" as="sourcePoint" />
+              <mxPoint x="-756" y="513" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Temperature Sensor" type="resource" resource_type="hardware" id="cVOCU7CYytCJJ8tOkeac-18">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="549.9997029702972" y="105.99646123260435" width="101.56" height="39.99" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="cVOCU7CYytCJJ8tOkeac-29">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-18" target="cVOCU7CYytCJJ8tOkeac-17" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint" />
+              <mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Change Energy Mode" type="task" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-21">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-5" vertex="1">
+            <mxGeometry x="414.9997029702972" y="354.37646123260436" width="108" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-24">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-5" source="cVOCU7CYytCJJ8tOkeac-21" target="cVOCU7CYytCJJ8tOkeac-20" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-806" y="475" as="sourcePoint" />
+              <mxPoint x="-824" y="372" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="owns" id="cVOCU7CYytCJJ8tOkeac-6">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;exitX=0.95;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" parent="cVOCU7CYytCJJ8tOkeac-4" source="cVOCU7CYytCJJ8tOkeac-8" target="cVOCU7CYytCJJ8tOkeac-5" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-43.18972083995868" y="74.8912302938387" as="sourcePoint" />
+              <mxPoint x="-692.6299219379857" y="104.7799827437446" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="" id="cVOCU7CYytCJJ8tOkeac-7">
+          <mxCell style="group;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-4" connectable="0" vertex="1">
+            <mxGeometry x="-3" y="130" width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Temperature Monitor Component" type="role" is_a_cpc="true" description="Involucra un módulo que utiliza sensores para obtener datos de temperatura del invernadero que luego son comunicados a otros nodos de la red." id="cVOCU7CYytCJJ8tOkeac-8">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="cVOCU7CYytCJJ8tOkeac-7" vertex="1">
+            <mxGeometry width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="cVOCU7CYytCJJ8tOkeac-9" value="" style="endArrow=none;html=1;startSize=9;endSize=6;sourcePerimeterSpacing=0;jumpStyle=none;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#004C99;rounded=0;" parent="cVOCU7CYytCJJ8tOkeac-7" source="cVOCU7CYytCJJ8tOkeac-8" target="cVOCU7CYytCJJ8tOkeac-8" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-88" y="-31" as="sourcePoint" />
+            <mxPoint x="-38" y="-81" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="79" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="boundary" id="cVOCU7CYytCJJ8tOkeac-31">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="1608" y="1589" width="888" height="511" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="cVOCU7CYytCJJ8tOkeac-32">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="cVOCU7CYytCJJ8tOkeac-31" vertex="1">
+            <mxGeometry x="38" y="4" width="850" height="507" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Monitor Soil Moisture" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Depende de que la batería posea un nivel de energía &#xa;bajo, lo cual implica la obtención de una sola muestra de temperatura &#xa;por ciclo, con una fiabilidad de muestra baja, pero con un consumo &#xa;mínimo de energía.&#xa;&#xa;- Alto Consumo: Depende de que la batería posea un nivel de energía &#xa;alto, lo cual implica un uso menos conservador de energía, y por lo &#xa;tanto una muestra más precisa promediando 10 mediciones consecutivas, &#xa;con una fiabilidad de muestra alta." id="cVOCU7CYytCJJ8tOkeac-33">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Analyze Battery Usage" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-37">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="207.99970297029728" y="367.99646123260436" width="135.85" height="28.75" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Publish Moisture Data" type="task" input_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-39">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="57" y="316" width="109" height="43" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-40">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-39" target="cVOCU7CYytCJJ8tOkeac-33" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-991.000297029703" y="447.99646123260436" as="sourcePoint" />
+              <mxPoint x="-967.000297029703" y="211.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Optimize Resources" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-47">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="264" y="242" width="110" height="41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-38">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-37" target="cVOCU7CYytCJJ8tOkeac-47" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-633" y="558" as="sourcePoint" />
+              <mxPoint x="-756" y="513" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Soil Moisture Sensor" type="resource" resource_type="hardware" id="cVOCU7CYytCJJ8tOkeac-50">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="567.9997029702972" y="138.99646123260436" width="101.56" height="39.99" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Resource Efficiency" type="softgoal" id="cVOCU7CYytCJJ8tOkeac-35">
+          <mxCell style="shape=stencil(7ZjbboMwDIafJpeVcoC2u5zY9h4pTdeslCCgp7dfmhC0uJSewsUkpApkO3E+bPMLFbGkWvNCIIrXiH0gSiOsL9o8WHPemLwqRFpb356Xki8ycY6wT4Tfdfz8Y0mq8lwvkyqvvMifeFWXXOa1to82G4nsCSdrTq1ViFJuRS3KZpH1Ivp1d17q56XB8r55eeNQeSOfl+BQieOBgKcDFXg20EDMY583WIFn2EvMomAVBonnwUbCLwULN8SAOFiN6VDEdKgak6GmYvLKHLNEe67JNEsWPN18l2qXLztxCl6vOwIuvFV7gW4Ie/eTts+7K20K4uc4Ul/UjwyIMfEOObnljck86XsMwR3hECKAEAOE2Edox+AVhhgwTAFDK5ndDKAMT3ViBjrh1LRFwKi3E6AM7nV4EAKDOmAfotU14p/iKNzb3VI8143Yp4gABYUUoB0M1uK5uQQUFFAQfIMC1uKpjhDQkQkYCwImE3YEzsV9s5mpSlxdZSTuQqmM94q8sWSlStGjeyuZZVqH1abvVLvgIJf6ZP39bO73aHwmc/GjZK4tczN7mjrf2pfyQhvnq9lln6B31yjho4SPEj5K+D+UcF9oOzabbRdSbrz2Xw7j+AU=);whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="511.9997029702972" y="289.99646123260436" width="155.78" height="53.49" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="help" type="contribution" value="help" id="cVOCU7CYytCJJ8tOkeac-48">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-47" target="cVOCU7CYytCJJ8tOkeac-35" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-773.000297029703" y="361.99646123260436" as="sourcePoint" />
+              <mxPoint x="-577.000297029703" y="396.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Collect Soil Moisture Data" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Depende de que la batería posea un nivel de energía &#xa;bajo, lo cual implica la obtención de una sola muestra de temperatura &#xa;por ciclo, con una fiabilidad de muestra baja, pero con un consumo &#xa;mínimo de energía.&#xa;&#xa;- Alto Consumo: Depende de que la batería posea un nivel de energía &#xa;alto, lo cual implica un uso menos conservador de energía, y por lo &#xa;tanto una muestra más precisa promediando 10 mediciones consecutivas, &#xa;con una fiabilidad de muestra alta." id="cVOCU7CYytCJJ8tOkeac-34">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="364.9997029702972" y="138.99646123260436" width="128.07" height="44.2" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="cVOCU7CYytCJJ8tOkeac-51">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-50" target="cVOCU7CYytCJJ8tOkeac-34" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint" />
+              <mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hurt" type="contribution" value="hurt" id="cVOCU7CYytCJJ8tOkeac-41">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-34" target="cVOCU7CYytCJJ8tOkeac-35" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-732.000297029703" y="249.99646123260436" as="sourcePoint" />
+              <mxPoint x="-538.000297029703" y="384.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-42">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-34" target="cVOCU7CYytCJJ8tOkeac-33" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-729.000297029703" y="96.99646123260436" as="sourcePoint" />
+              <mxPoint x="-908.000297029703" y="166.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Change Energy Mode" type="task" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="cVOCU7CYytCJJ8tOkeac-36">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-32" vertex="1">
+            <mxGeometry x="406.9997029702972" y="354.74646123260436" width="108" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="cVOCU7CYytCJJ8tOkeac-49">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="cVOCU7CYytCJJ8tOkeac-32" source="cVOCU7CYytCJJ8tOkeac-36" target="cVOCU7CYytCJJ8tOkeac-47" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-806" y="475" as="sourcePoint" />
+              <mxPoint x="-824" y="372" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="owns" id="cVOCU7CYytCJJ8tOkeac-43">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;exitX=0.95;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" parent="cVOCU7CYytCJJ8tOkeac-31" source="cVOCU7CYytCJJ8tOkeac-45" target="cVOCU7CYytCJJ8tOkeac-32" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-43.18972083995868" y="74.8912302938387" as="sourcePoint" />
+              <mxPoint x="-692.6299219379857" y="104.7799827437446" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="" id="cVOCU7CYytCJJ8tOkeac-44">
+          <mxCell style="group;allowArrows=0;" parent="cVOCU7CYytCJJ8tOkeac-31" connectable="0" vertex="1">
+            <mxGeometry x="-3" y="130" width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Soil Moisture Monitor Component" type="role" is_a_cpc="true" description="Involucra un módulo que utiliza sensores para obtener datos de humedad del suelo de una planta que luego son comunicados a otros nodos de la red." id="cVOCU7CYytCJJ8tOkeac-45">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="cVOCU7CYytCJJ8tOkeac-44" vertex="1">
+            <mxGeometry width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="cVOCU7CYytCJJ8tOkeac-46" value="" style="endArrow=none;html=1;startSize=9;endSize=6;sourcePerimeterSpacing=0;jumpStyle=none;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#004C99;rounded=0;" parent="cVOCU7CYytCJJ8tOkeac-44" source="cVOCU7CYytCJJ8tOkeac-45" target="cVOCU7CYytCJJ8tOkeac-45" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-88" y="-31" as="sourcePoint" />
+            <mxPoint x="-38" y="-81" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="79" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="boundary" id="tc0aXw5la06j1g5yClUv-1">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="1639" y="2133" width="888" height="511" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="tc0aXw5la06j1g5yClUv-2">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="tc0aXw5la06j1g5yClUv-1" vertex="1">
+            <mxGeometry x="38" y="4" width="850" height="507" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Maintain Soil Moisture Levels" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Dependiendo de la planta configurada, se va accionar el &#xa;riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel&#xa; promedio establecido para la especie, llegando al nivel promedio de &#xa;humedad.&#xa;&#xa;- Alto Consumo: Dependiendo de la planta configurada, se va accionar el &#xa;riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel&#xa; promdio establecido para la especie, de manera que se llegue al &#xa;promedio del rango óptimo de humedad." id="tc0aXw5la06j1g5yClUv-3">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Change Soil Moisture" type="task" input_parameters="[{&quot;name&quot;:&quot;Soil Moisture Reference Value&quot;,&quot;description&quot;:&quot;Nivel de humedad al cual se debería llegar.&quot;}]" output_parameters="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Dependiendo de la planta configurada, se va accionar el &#xa;riego cuando el nivel de humedad se encuentre a un 20% inferior al nivel&#xa; promedio establecido para la especie, llegando al nivel promedio de &#xa;humedad.&#xa;&#xa;- Alto Consumo: Dependiendo de la planta configurada, se va accionar el &#xa;riego cuando el nivel de humedad se encuentre a un 10% inferior al nivel&#xa; promdio establecido para la especie, de manera que se llegue al &#xa;promedio del rango óptimo de humedad." id="tc0aXw5la06j1g5yClUv-4">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Resource Efficiency" type="softgoal" id="tc0aXw5la06j1g5yClUv-5">
+          <mxCell style="shape=stencil(7ZjbboMwDIafJpeVcoC2u5zY9h4pTdeslCCgp7dfmhC0uJSewsUkpApkO3E+bPMLFbGkWvNCIIrXiH0gSiOsL9o8WHPemLwqRFpb356Xki8ycY6wT4Tfdfz8Y0mq8lwvkyqvvMifeFWXXOa1to82G4nsCSdrTq1ViFJuRS3KZpH1Ivp1d17q56XB8r55eeNQeSOfl+BQieOBgKcDFXg20EDMY583WIFn2EvMomAVBonnwUbCLwULN8SAOFiN6VDEdKgak6GmYvLKHLNEe67JNEsWPN18l2qXLztxCl6vOwIuvFV7gW4Ie/eTts+7K20K4uc4Ul/UjwyIMfEOObnljck86XsMwR3hECKAEAOE2Edox+AVhhgwTAFDK5ndDKAMT3ViBjrh1LRFwKi3E6AM7nV4EAKDOmAfotU14p/iKNzb3VI8143Yp4gABYUUoB0M1uK5uQQUFFAQfIMC1uKpjhDQkQkYCwImE3YEzsV9s5mpSlxdZSTuQqmM94q8sWSlStGjeyuZZVqH1abvVLvgIJf6ZP39bO73aHwmc/GjZK4tczN7mjrf2pfyQhvnq9lln6B31yjho4SPEj5K+D+UcF9oOzabbRdSbrz2Xw7j+AU=);whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="513.9997029702972" y="327.99646123260436" width="155.78" height="53.49" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Analyze Battery Usage" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-7">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="208.99970297029728" y="352.73646123260437" width="135.85" height="28.75" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Check Soil Moisture Levels" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-9">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="57" y="316" width="109" height="43" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-10">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-9" target="tc0aXw5la06j1g5yClUv-3" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-991.000297029703" y="447.99646123260436" as="sourcePoint" />
+              <mxPoint x="-967.000297029703" y="211.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hurt" type="contribution" value="hurt" id="tc0aXw5la06j1g5yClUv-11">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-4" target="tc0aXw5la06j1g5yClUv-5" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-732.000297029703" y="249.99646123260436" as="sourcePoint" />
+              <mxPoint x="-538.000297029703" y="384.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-12">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-4" target="tc0aXw5la06j1g5yClUv-3" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-729.000297029703" y="96.99646123260436" as="sourcePoint" />
+              <mxPoint x="-908.000297029703" y="166.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="&lt;div&gt;Plant Waterer&lt;/div&gt;" type="resource" resource_type="hardware" id="tc0aXw5la06j1g5yClUv-20">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="487.9997029702972" y="41.99646123260436" width="101.56" height="39.99" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="tc0aXw5la06j1g5yClUv-21">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-20" target="tc0aXw5la06j1g5yClUv-4" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint" />
+              <mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Optimize Resources" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-17">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="277" y="236" width="110" height="41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="help" type="contribution" value="help" id="tc0aXw5la06j1g5yClUv-18">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-17" target="tc0aXw5la06j1g5yClUv-5" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-773.000297029703" y="361.99646123260436" as="sourcePoint" />
+              <mxPoint x="-577.000297029703" y="396.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-8">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-7" target="tc0aXw5la06j1g5yClUv-17" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-633" y="558" as="sourcePoint" />
+              <mxPoint x="-756" y="513" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Plant Configuration Pin" type="resource" resource_type="hardware" id="U5gbfCX47OS8Pz70eV5W-3">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="534.9997029702972" y="126.41646123260436" width="101.56" height="39.99" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="U5gbfCX47OS8Pz70eV5W-4">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="U5gbfCX47OS8Pz70eV5W-3" target="tc0aXw5la06j1g5yClUv-4" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="537" y="135" as="sourcePoint" />
+              <mxPoint x="488" y="136" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Change Energy Mode" type="task" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-6">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-2" vertex="1">
+            <mxGeometry x="361.0297029702972" y="346.11646123260437" width="108" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-19">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-2" source="tc0aXw5la06j1g5yClUv-6" target="tc0aXw5la06j1g5yClUv-17" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-806" y="475" as="sourcePoint" />
+              <mxPoint x="-824" y="372" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="owns" id="tc0aXw5la06j1g5yClUv-13">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;exitX=0.95;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" parent="tc0aXw5la06j1g5yClUv-1" source="tc0aXw5la06j1g5yClUv-15" target="tc0aXw5la06j1g5yClUv-2" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-43.18972083995868" y="74.8912302938387" as="sourcePoint" />
+              <mxPoint x="-692.6299219379857" y="104.7799827437446" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="" id="tc0aXw5la06j1g5yClUv-14">
+          <mxCell style="group;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-1" connectable="0" vertex="1">
+            <mxGeometry x="-3" y="130" width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Soil Moisture Actuator Component" type="role" is_a_cpc="true" description="Involucra un módulo que utiliza un actuador de válvula controlada por un servo motor y cuya lógica de control depende del valor de humedad monitoreado &#xa;por otro nodo de la red y de la especie configurada para la planta." id="tc0aXw5la06j1g5yClUv-15">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="tc0aXw5la06j1g5yClUv-14" vertex="1">
+            <mxGeometry width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="tc0aXw5la06j1g5yClUv-16" value="" style="endArrow=none;html=1;startSize=9;endSize=6;sourcePerimeterSpacing=0;jumpStyle=none;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#004C99;rounded=0;" parent="tc0aXw5la06j1g5yClUv-14" source="tc0aXw5la06j1g5yClUv-15" target="tc0aXw5la06j1g5yClUv-15" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-88" y="-31" as="sourcePoint" />
+            <mxPoint x="-38" y="-81" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="79" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="" type="boundary" id="tc0aXw5la06j1g5yClUv-23">
+          <mxCell style="group" parent="1" connectable="0" vertex="1">
+            <mxGeometry x="1589" y="473" width="888" height="511" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="boundary" id="tc0aXw5la06j1g5yClUv-24">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;dashed=1;fillColor=#faffff;strokeColor=#6c8ebf;allowArrows=0;container=1;dropTarget=1;" parent="tc0aXw5la06j1g5yClUv-23" vertex="1">
+            <mxGeometry x="38" y="4" width="850" height="507" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Maintain Greenhouse Temperature" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Se va accionar el calefactor cuando la temperatura del &#xa;invernadero disminuya un 10% del promedio de temperatura ideal, de &#xa;manera que se produzcan menos accionamientos en un periodo dado.&#xa;&#xa;- Alto Consumo: Se va accionar el calefactor cuando la temperatura del &#xa;invernadero disminuya un 1% del promedio de temperatura ideal, de manera&#xa; que se produzcan más accionamientos en un periodo dado para una &#xa;regulación de temperatura más precisa y estable." id="tc0aXw5la06j1g5yClUv-25">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="136.999702970297" y="121.99646123260446" width="140" height="44.41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Change Greenhouse Temperature" type="task" input_parameters="[{&quot;name&quot;:&quot;Temperature Reference Value&quot;,&quot;description&quot;:&quot;Temperatura a la cual se debería llegar.&quot;}]" output_parameters="[]" operation_modes_enabled="true" operation_modes_description="Estos son los modos de operación recomendados.&#xa;- Bajo consumo: Se va accionar el calefactor cuando la temperatura del &#xa;invernadero disminuya un 10% del promedio de temperatura ideal, de &#xa;manera que se produzcan menos accionamientos en un periodo dado.&#xa;&#xa;- Alto Consumo: Se va accionar el calefactor cuando la temperatura del &#xa;invernadero disminuya un 1% del promedio de temperatura ideal, de manera&#xa; que se produzcan más accionamientos en un periodo dado para una &#xa;regulación de temperatura más precisa y estable." id="tc0aXw5la06j1g5yClUv-26">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="350.9997029702972" y="105.99646123260436" width="128.07" height="44.2" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Resource Efficiency" type="softgoal" id="tc0aXw5la06j1g5yClUv-27">
+          <mxCell style="shape=stencil(7ZjbboMwDIafJpeVcoC2u5zY9h4pTdeslCCgp7dfmhC0uJSewsUkpApkO3E+bPMLFbGkWvNCIIrXiH0gSiOsL9o8WHPemLwqRFpb356Xki8ycY6wT4Tfdfz8Y0mq8lwvkyqvvMifeFWXXOa1to82G4nsCSdrTq1ViFJuRS3KZpH1Ivp1d17q56XB8r55eeNQeSOfl+BQieOBgKcDFXg20EDMY583WIFn2EvMomAVBonnwUbCLwULN8SAOFiN6VDEdKgak6GmYvLKHLNEe67JNEsWPN18l2qXLztxCl6vOwIuvFV7gW4Ie/eTts+7K20K4uc4Ul/UjwyIMfEOObnljck86XsMwR3hECKAEAOE2Edox+AVhhgwTAFDK5ndDKAMT3ViBjrh1LRFwKi3E6AM7nV4EAKDOmAfotU14p/iKNzb3VI8143Yp4gABYUUoB0M1uK5uQQUFFAQfIMC1uKpjhDQkQkYCwImE3YEzsV9s5mpSlxdZSTuQqmM94q8sWSlStGjeyuZZVqH1abvVLvgIJf6ZP39bO73aHwmc/GjZK4tczN7mjrf2pfyQhvnq9lln6B31yjho4SPEj5K+D+UcF9oOzabbRdSbrz2Xw7j+AU=);whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="586.9997029702972" y="286.99646123260436" width="155.78" height="53.49" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Change Energy Mode" type="task" input_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" output_parameters="[]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-28">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="432.9997029702972" y="353.99646123260436" width="108" height="42" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Check Greenhouse Temperature" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-31">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="57" y="316" width="109" height="43" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-32">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-31" target="tc0aXw5la06j1g5yClUv-25" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-991.000297029703" y="447.99646123260436" as="sourcePoint" />
+              <mxPoint x="-967.000297029703" y="211.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="hurt" type="contribution" value="hurt" id="tc0aXw5la06j1g5yClUv-33">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-26" target="tc0aXw5la06j1g5yClUv-27" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-732.000297029703" y="249.99646123260436" as="sourcePoint" />
+              <mxPoint x="-538.000297029703" y="384.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-34">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-26" target="tc0aXw5la06j1g5yClUv-25" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-729.000297029703" y="96.99646123260436" as="sourcePoint" />
+              <mxPoint x="-908.000297029703" y="166.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Analyze Battery Usage" type="task" input_parameters="[]" output_parameters="[{&quot;name&quot;:&quot;Energy Level&quot;,&quot;description&quot;:&quot;Nivel de energía de la batería del módulo.&quot;}]" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-29">
+          <mxCell style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;fillColor=#dae8fc;strokeColor=#6c8ebf;size=10;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="192.99970297029728" y="383.24646123260436" width="135.85" height="28.75" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Optimize Resources" type="goal" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-39">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=1;fontSize=12;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="274" y="241" width="110" height="41" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="help" type="contribution" value="help" id="tc0aXw5la06j1g5yClUv-40">
+          <mxCell style="endArrow=open;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-39" target="tc0aXw5la06j1g5yClUv-27" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-773.000297029703" y="361.99646123260436" as="sourcePoint" />
+              <mxPoint x="-577.000297029703" y="396.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-41">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-28" target="tc0aXw5la06j1g5yClUv-39" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-806" y="475" as="sourcePoint" />
+              <mxPoint x="-824" y="372" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="refinement" value="and" id="tc0aXw5la06j1g5yClUv-30">
+          <mxCell style="endArrow=ERone;html=1;rounded=0;endFill=0;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-29" target="tc0aXw5la06j1g5yClUv-39" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-633" y="558" as="sourcePoint" />
+              <mxPoint x="-756" y="513" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Greenhouse Heater" type="resource" resource_type="hardware" id="tc0aXw5la06j1g5yClUv-42">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-24" vertex="1">
+            <mxGeometry x="498.9997029702972" y="51.99646123260435" width="101.56" height="39.99" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" type="needed-by" id="tc0aXw5la06j1g5yClUv-43">
+          <mxCell style="endArrow=oval;html=1;rounded=0;endFill=1;endSize=10;labelPosition=right;verticalLabelPosition=top;align=left;verticalAlign=bottom;fontSize=12;curved=1;" parent="tc0aXw5la06j1g5yClUv-24" source="tc0aXw5la06j1g5yClUv-42" target="tc0aXw5la06j1g5yClUv-26" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-535.000297029703" y="103.99646123260436" as="sourcePoint" />
+              <mxPoint x="-616.000297029703" y="87.99646123260436" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="owns" id="tc0aXw5la06j1g5yClUv-35">
+          <mxCell style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;endSize=10;curved=1;entryX=0.028;entryY=0.384;entryDx=0;entryDy=0;entryPerimeter=0;rounded=0;exitX=0.95;exitY=0.7;exitDx=0;exitDy=0;exitPerimeter=0;" parent="tc0aXw5la06j1g5yClUv-23" source="tc0aXw5la06j1g5yClUv-37" target="tc0aXw5la06j1g5yClUv-24" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="-43.18972083995868" y="74.8912302938387" as="sourcePoint" />
+              <mxPoint x="-692.6299219379857" y="104.7799827437446" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="" type="" id="tc0aXw5la06j1g5yClUv-36">
+          <mxCell style="group;allowArrows=0;" parent="tc0aXw5la06j1g5yClUv-23" connectable="0" vertex="1">
+            <mxGeometry x="-3" y="130" width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Temperature Actuator Component" type="role" is_a_cpc="true" description="Involucra un módulo que utiliza un actuador de calefactor para el &#xa;invernadero(accionado a través de una señal digital) y cuya lógica de &#xa;control depende del valor de temperatura del invernadero monitoreado por otro nodo de la red." id="tc0aXw5la06j1g5yClUv-37">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="tc0aXw5la06j1g5yClUv-36" vertex="1">
+            <mxGeometry width="80" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="tc0aXw5la06j1g5yClUv-38" value="" style="endArrow=none;html=1;startSize=9;endSize=6;sourcePerimeterSpacing=0;jumpStyle=none;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;strokeColor=#004C99;rounded=0;" parent="tc0aXw5la06j1g5yClUv-36" source="tc0aXw5la06j1g5yClUv-37" target="tc0aXw5la06j1g5yClUv-37" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-88" y="-31" as="sourcePoint" />
+            <mxPoint x="-38" y="-81" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="40" y="79" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object label="Temperature Data" type="resource" dependum_data_structure="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-47">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="1344" y="1445" width="115" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Moisture Data" type="resource" dependum_data_structure="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-49">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="1287" y="1871" width="115" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Soil Moisture Data" type="resource" dependum_data_structure="[{&quot;name&quot;:&quot;Soil Moisture&quot;,&quot;description&quot;:&quot;Nivel de humedad de la planta correspondiente.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-50">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="1393" y="2290" width="115" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Temperature Data" type="resource" dependum_data_structure="[{&quot;name&quot;:&quot;Greenhouse Temp&quot;,&quot;description&quot;:&quot;Temperatura ambiental del invernadero.&quot;}]" interval_in_milliseconds="10000" operation_modes_enabled="false" id="tc0aXw5la06j1g5yClUv-51">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontSize=12;fillColor=#dae8fc;strokeColor=#6c8ebf;allowArrows=0;" parent="1" vertex="1">
+            <mxGeometry x="1353" y="994" width="115" height="40" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-53">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-47" target="cVOCU7CYytCJJ8tOkeac-26" edge="1">
+            <mxGeometry x="-0.0863" y="8" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1640" y="1655" as="sourcePoint" />
+              <mxPoint x="1586" y="1655" as="targetPoint" />
+              <Array as="points">
+                <mxPoint x="1401" y="1372" />
+              </Array>
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-54">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-51" target="cVOCU7CYytCJJ8tOkeac-26" edge="1">
+            <mxGeometry x="0.2766" y="-68" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1640" y="1055" as="sourcePoint" />
+              <mxPoint x="1586" y="1055" as="targetPoint" />
+              <Array as="points">
+                <mxPoint x="1411" y="1325" />
+                <mxPoint x="1791" y="1325" />
+              </Array>
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-57">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-49" target="cVOCU7CYytCJJ8tOkeac-39" edge="1">
+            <mxGeometry x="-0.0932" y="-14" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1402" y="1782" as="sourcePoint" />
+              <mxPoint x="1348" y="1782" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-58">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-50" target="cVOCU7CYytCJJ8tOkeac-39" edge="1">
+            <mxGeometry x="-0.0711" y="5" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1402" y="2262" as="sourcePoint" />
+              <mxPoint x="1348" y="2262" as="targetPoint" />
+              <Array as="points">
+                <mxPoint x="1456" y="2093" />
+                <mxPoint x="1736" y="2093" />
+              </Array>
+              <mxPoint x="-1" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-55">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-31" target="tc0aXw5la06j1g5yClUv-51" edge="1">
+            <mxGeometry x="0.1559" y="82" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1640" y="1055" as="sourcePoint" />
+              <mxPoint x="1586" y="1055" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-52">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-45" target="tc0aXw5la06j1g5yClUv-47" edge="1">
+            <mxGeometry x="-0.2232" y="9" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1640" y="1655" as="sourcePoint" />
+              <mxPoint x="1586" y="1655" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-56">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="EhskmBOlh9XUoAK4D_Mz-7" target="tc0aXw5la06j1g5yClUv-49" edge="1">
+            <mxGeometry x="-0.2741" y="-23" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1660" y="1990" as="sourcePoint" />
+              <mxPoint x="1606" y="1990" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="EhskmBOlh9XUoAK4D_Mz-27">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="b_b95VF1LTJlwQwtALbD-64" target="EhskmBOlh9XUoAK4D_Mz-26" edge="1">
+            <mxGeometry x="-0.2551" y="22" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="722" y="1231" as="sourcePoint" />
+              <mxPoint x="668" y="1231" as="targetPoint" />
+              <mxPoint x="-1" as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="D" type="dependency-link" id="tc0aXw5la06j1g5yClUv-60">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;endFill=0;endSize=11;fontSize=16;" parent="1" source="tc0aXw5la06j1g5yClUv-9" target="tc0aXw5la06j1g5yClUv-50" edge="1">
+            <mxGeometry x="-0.3023" y="33" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="1397" y="2213" as="sourcePoint" />
+              <mxPoint x="1502.999999999999" y="2203" as="targetPoint" />
+              <Array as="points">
+                <mxPoint x="1503" y="2587" />
+              </Array>
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

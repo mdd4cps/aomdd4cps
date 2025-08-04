@@ -1,0 +1,35 @@
+
+# ─── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.log
+
+# ─── Editor / IDE ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+
+# ─── Operating System ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ─── Backups & Auto-generated ───────────────────────────────────
+*.bak
+*.old
+*.tmp
+*.drawio.bak
+*.xml~*
+
+# ─── Environment / Credentials ──────────────────────────────────
+.env
+*.key
+*.pem
+
+# ─── Output folders (if any in future) ──────────────────────────
+dist/
+build/
+output/
+generated_code/

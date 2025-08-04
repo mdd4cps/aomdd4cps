@@ -1,0 +1,47 @@
+AOMDD4CPS – License for Non-Commercial Use  
+Based on: Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+This project and its contents (source code, documentation, diagrams, models, and associated files) are licensed under the terms of the Creative Commons Attribution-NonCommercial 4.0 International License.
+
+You are free to:
+- **Share** — copy and redistribute the material in any medium or format
+- **Adapt** — remix, transform, and build upon the material
+- As long as you follow these terms:
+
+1. **Attribution**  
+   You must give appropriate credit to the project, provide a link to the license, and indicate if changes were made.  
+   A proper citation is:  
+   > *AOMDD4CPS: An Agent-Oriented Model-Driven Development Process for Cyber-Physical Systems*
+
+2. **NonCommercial**  
+   You may not use the material for **commercial purposes** without prior written permission.
+
+3. **No additional restrictions**  
+   You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+
+🔗 Full license text: https://creativecommons.org/licenses/by-nc/4.0/
+
+---
+
+🔹 **Third-Party Software Notice**
+
+This project uses third-party software, including:
+- **XSLT processing tools by Zaxonica (Saxon)**, integrated via Docker.
+
+These components are governed by their **own licenses and terms of use**, which may differ from this license.  
+**Users are responsible for reviewing and complying with the terms of all third-party components.**
+
+In particular:
+- The **Saxon-HE edition** is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**.
+- If using **Saxon-PE or Saxon-EE**, a valid commercial license from Zaxonica is required.
+
+See Saxonica’s license information:  
+🔗 https://www.saxonica.com/documentation9.5/conditions/index.html
+
+---
+
+📬 **Contact**  
+For questions, academic collaborations, or commercial licensing inquiries, please contact:  
+**aomdd4cps@gmail.com**
+
+
