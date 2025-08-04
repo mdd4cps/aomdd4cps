@@ -1,6 +1,8 @@
 # MDD4CPS
 A tool designed to implement Model-Driven Development (MDD) for Cyber-Physical Systems (CPS), enabling automated model transformation, and code generation to streamline CPS development. For more details, see the [process overview documentation](MDD4CPS_process_overview.md).
 
+> ⚠️ **Note:** This project is a continuation of the original repository [LD-111/MDD4CPS](https://github.com/LD-111/MDD4CPS), which served as the foundation for this implementation. This version introduces revised terminology, enhanced documentation, and ongoing support for future extensions.
+
 ## Installation
 
 1. **Clone the Repository**  
@@ -102,6 +104,3 @@ This project is made available for non-commercial use under a license based on
 [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
 
 For full license terms and third-party software notices, see the [LICENSE](LICENSE) file.
-
-> ⚠️ **Note:** This project is a continuation of the original repository [LD-111/MDD4CPS](https://github.com/LD-111/MDD4CPS), which served as the foundation for this implementation. This version introduces revised terminology, enhanced documentation, and ongoing support for future extensions.
-
