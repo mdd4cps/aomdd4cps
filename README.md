@@ -5,8 +5,8 @@ A tool designed to implement Model-Driven Development (MDD) for Cyber-Physical S
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/LD-111/MDD4CPS.git
-   cd MDD4CPS/src/
+   git clone https://github.com/mdd4cps/aomdd4cps.git
+   cd AOMDD4CPS/src/
    ```
 2. **Build and start the container using Docker Compose:**  
    ```bash
