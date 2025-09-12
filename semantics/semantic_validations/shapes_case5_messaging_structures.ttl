@@ -1,0 +1,67 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix :    <https://example.org/mdd4cps/pim#> .
+
+#################################################################
+# Case 5 — Conditional messaging structure (CIM-driven)
+# Robust targeting: select actual senders by the property they use (:deliversTo),
+# not by rdf:type, to avoid false positives under inference or data noise.
+#################################################################
+
+# (Optional) Guard for allowed CIM types (unchanged)
+:AllowedCIMType
+  a sh:NodeShape ;
+  sh:targetObjectsOf :id_cim_type ;
+  sh:in ( "softgoal" "goal" "task" "resource" "quality" ) ;
+  sh:message "id_cim_type must be one of: softgoal, goal, task, resource, quality." .
+
+# ---------------------- MessageSender rules (robust target) ----------------------
+:MessageSender_ConditionalShape
+  a sh:NodeShape ;
+  # Target ONLY nodes that actually send messages
+  sh:targetSubjectsOf :deliversTo ;
+
+  # Must deliverTo a MessageReceiver (kept for class check + minCount)
+  sh:property [
+    sh:path :deliversTo ;
+    sh:minCount 1 ;
+    sh:class :MessageReceiver ;
+    sh:message "MessageSender must deliverTo a MessageReceiver."
+  ] ;
+
+  # Must include dependum_data_structure (JSON-looking, non-empty)
+  sh:property [
+    sh:path :dependum_data_structure ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:pattern "^\\s*\\{(?s).*\\}\\s*$" ;
+    sh:minLength 2 ;
+    sh:message "MessageSender must include dependum_data_structure as a non-empty JSON object string."
+  ] ;
+
+  # Conditional: if not softgoal, requires extractsFrom InternalElement
+  sh:or (
+    [ sh:property [ sh:path :id_cim_type ; sh:hasValue "softgoal" ] ]
+    [ sh:property [
+        sh:path :extractsFrom ;
+        sh:minCount 1 ;
+        sh:class :InternalElement ;
+        sh:message "Since id_cim_type is not 'softgoal', MessageSender must extractsFrom some InternalElement."
+      ] ]
+  ) .
+
+# ---------------------- MessageReceiver rules (igual que antes) ----------------------
+:MessageReceiver_ConditionalShape
+  a sh:NodeShape ;
+  sh:targetClass :MessageReceiver ;
+
+  sh:or (
+    [ sh:property [ sh:path :id_cim_type ; sh:hasValue "softgoal" ] ]
+    [ sh:property [
+        sh:path :forwardsTo ;
+        sh:minCount 1 ;
+        sh:class :InternalElement ;
+        sh:message "Since id_cim_type is not 'softgoal', MessageReceiver must forwardsTo some InternalElement."
+      ] ]
+  ) .
+

@@ -1,0 +1,454 @@
+@prefix : <https://example.org/mdd4cps/pim#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://example.org/mdd4cps/pim#> .
+
+<https://example.org/mdd4cps/pim> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://example.org/mdd4cps/pim#containsElement
+:containsElement rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isContainedIn ;
+                 rdfs:domain :CPComponent ;
+                 rdfs:range :InternalElement .
+
+
+###  https://example.org/mdd4cps/pim#deliversTo
+:deliversTo rdf:type owl:ObjectProperty ;
+            owl:inverseOf :hasSender ;
+            rdfs:domain :MessageSender ;
+            rdfs:range :MessageReceiver .
+
+
+###  https://example.org/mdd4cps/pim#extractsFrom
+:extractsFrom rdf:type owl:ObjectProperty ;
+              rdfs:domain :MessageSender ;
+              rdfs:range :InternalElement .
+
+
+###  https://example.org/mdd4cps/pim#forwardsTo
+:forwardsTo rdf:type owl:ObjectProperty ;
+            rdfs:domain :MessageReceiver ;
+            rdfs:range :InternalElement .
+
+
+###  https://example.org/mdd4cps/pim#hasChildAction
+:hasChildAction rdf:type owl:ObjectProperty ;
+                owl:inverseOf :hasParentAction ;
+                rdfs:domain :RefinementOperator ;
+                rdfs:range :Action .
+
+
+###  https://example.org/mdd4cps/pim#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :CPModel ;
+              rdfs:range :CPComponent .
+
+
+###  https://example.org/mdd4cps/pim#hasElement
+:hasElement rdf:type owl:ObjectProperty ;
+            rdfs:domain :CPModel ;
+            rdfs:range :InternalElement ;
+            owl:propertyChainAxiom ( :hasComponent
+                                     :containsElement
+                                   ) .
+
+
+###  https://example.org/mdd4cps/pim#hasParentAction
+:hasParentAction rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Action ;
+                 rdfs:range :RefinementOperator .
+
+
+###  https://example.org/mdd4cps/pim#hasRefinementOperator
+:hasRefinementOperator rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Action ;
+                       rdfs:range :RefinementOperator .
+
+
+###  https://example.org/mdd4cps/pim#hasRefinementType
+:hasRefinementType rdf:type owl:ObjectProperty ;
+                   rdfs:domain :RefinementOperator ;
+                   rdfs:range :RefinementOperatorType .
+
+
+###  https://example.org/mdd4cps/pim#hasSender
+:hasSender rdf:type owl:ObjectProperty ;
+           rdfs:domain :MessageReceiver ;
+           rdfs:range :MessageSender .
+
+
+###  https://example.org/mdd4cps/pim#isContainedIn
+:isContainedIn rdf:type owl:ObjectProperty ;
+               rdfs:domain :InternalElement ;
+               rdfs:range :CPComponent .
+
+
+###  https://example.org/mdd4cps/pim#isNeededBy
+:isNeededBy rdf:type owl:ObjectProperty ;
+            owl:inverseOf :needsResource ;
+            rdfs:domain :Resource ;
+            rdfs:range :OnDemandAction .
+
+
+###  https://example.org/mdd4cps/pim#needsResource
+:needsResource rdf:type owl:ObjectProperty ;
+               rdfs:domain :OnDemandAction ;
+               rdfs:range :Resource .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://example.org/mdd4cps/pim#cim_dependeeElmnt_is_softgoal
+:cim_dependeeElmnt_is_softgoal rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain :MessageSender ;
+                               rdfs:range xsd:boolean .
+
+
+###  https://example.org/mdd4cps/pim#cim_dependerElmnt_is_softgoal
+:cim_dependerElmnt_is_softgoal rdf:type owl:DatatypeProperty ,
+                                        owl:FunctionalProperty ;
+                               rdfs:domain :MessageReceiver ;
+                               rdfs:range xsd:boolean .
+
+
+###  https://example.org/mdd4cps/pim#contribution_array
+:contribution_array rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Action
+                                                :MessageReceiver
+                                                :MessageSender
+                                                :Resource
+                                              )
+                                ] ;
+                    rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#data_structure
+:data_structure rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :SWResource ;
+                rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#dependum_data_structure
+:dependum_data_structure rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain :MessageSender ;
+                         rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#description
+:description rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :CPComponent ;
+             rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#id
+:id rdf:type owl:DatatypeProperty ,
+             owl:FunctionalProperty ;
+    rdfs:domain :InternalElement ;
+    rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#id_cim_name
+:id_cim_name rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :CPComponent
+                                         :InternalElement
+                                       )
+                         ] ;
+             rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#id_cim_parent
+:id_cim_parent rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :CPComponent
+                                           :InternalElement
+                                         )
+                           ] ;
+               rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#id_cim_type
+:id_cim_type rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :CPComponent
+                                         :InternalElement
+                                       )
+                         ] ;
+             rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#ifsg_softgoal_id
+:ifsg_softgoal_id rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :MessageReceiver
+                                              :MessageSender
+                                            )
+                              ] ;
+                  rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#ifsg_softgoal_name
+:ifsg_softgoal_name rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :MessageReceiver
+                                                :MessageSender
+                                              )
+                                ] ;
+                    rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#input_parameters
+:input_parameters rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :OnDemandAction ;
+                  rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#interval_in_milliseconds
+:interval_in_milliseconds rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain [ rdf:type owl:Class ;
+                                        owl:unionOf ( :MessageSender
+                                                      :OnIntervalAction
+                                                    )
+                                      ] ;
+                          rdfs:range xsd:integer .
+
+
+###  https://example.org/mdd4cps/pim#name
+:name rdf:type owl:DatatypeProperty ,
+               owl:FunctionalProperty ;
+      rdfs:domain :InternalElement ;
+      rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#operation_modes_description
+:operation_modes_description rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain :Action ;
+                             rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#operation_modes_enabled
+:operation_modes_enabled rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain :Action ;
+                         rdfs:range xsd:boolean .
+
+
+###  https://example.org/mdd4cps/pim#output_parameters
+:output_parameters rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :OnDemandAction ;
+                   rdfs:range xsd:string .
+
+
+###  https://example.org/mdd4cps/pim#qualification_array
+:qualification_array rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Action
+                                                 :MessageReceiver
+                                                 :MessageSender
+                                                 :Resource
+                                               )
+                                 ] ;
+                     rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://example.org/mdd4cps/pim#Action
+:Action rdf:type owl:Class ;
+        owl:equivalentClass [ rdf:type owl:Class ;
+                              owl:unionOf ( :OnDemandAction
+                                            :OnIntervalAction
+                                          )
+                            ] ;
+        rdfs:subClassOf :InternalElement ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasRefinementOperator ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :RefinementOperator
+                        ] .
+
+
+###  https://example.org/mdd4cps/pim#CPComponent
+:CPComponent rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :containsElement ;
+                               owl:someValuesFrom :InternalElement
+                             ] .
+
+
+###  https://example.org/mdd4cps/pim#CPModel
+:CPModel rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasComponent ;
+                           owl:someValuesFrom :CPComponent
+                         ] .
+
+
+###  https://example.org/mdd4cps/pim#HWResource
+:HWResource rdf:type owl:Class ;
+            rdfs:subClassOf :Resource ;
+            owl:disjointWith :SWResource .
+
+
+###  https://example.org/mdd4cps/pim#InternalElement
+:InternalElement rdf:type owl:Class ;
+                 owl:equivalentClass [ rdf:type owl:Class ;
+                                       owl:unionOf ( :Action
+                                                     :MessageReceiver
+                                                     :MessageSender
+                                                     :RefinementOperator
+                                                     :Resource
+                                                   )
+                                     ] ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :isContainedIn ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :CPComponent
+                                 ] .
+
+
+###  https://example.org/mdd4cps/pim#MessageReceiver
+:MessageReceiver rdf:type owl:Class ;
+                 rdfs:subClassOf :InternalElement ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :forwardsTo ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :InternalElement
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasSender ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :MessageSender
+                                 ] .
+
+
+###  https://example.org/mdd4cps/pim#MessageSender
+:MessageSender rdf:type owl:Class ;
+               rdfs:subClassOf :InternalElement ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :deliversTo ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :MessageReceiver
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :extractsFrom ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :InternalElement
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :interval_in_milliseconds ;
+                                 owl:someValuesFrom xsd:integer
+                               ] .
+
+
+###  https://example.org/mdd4cps/pim#OnDemandAction
+:OnDemandAction rdf:type owl:Class ;
+                rdfs:subClassOf :Action ;
+                owl:disjointWith :OnIntervalAction .
+
+
+###  https://example.org/mdd4cps/pim#OnIntervalAction
+:OnIntervalAction rdf:type owl:Class ;
+                  rdfs:subClassOf :Action ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :interval_in_milliseconds ;
+                                    owl:someValuesFrom xsd:integer
+                                  ] .
+
+
+###  https://example.org/mdd4cps/pim#RefinementOperator
+:RefinementOperator rdf:type owl:Class ;
+                    rdfs:subClassOf :InternalElement ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasChildAction ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Action
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasRefinementType ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :RefinementOperatorType
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty [ owl:inverseOf :hasParentAction
+                                                     ] ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Action
+                                    ] .
+
+
+###  https://example.org/mdd4cps/pim#RefinementOperatorType
+:RefinementOperatorType rdf:type owl:Class .
+
+
+###  https://example.org/mdd4cps/pim#Resource
+:Resource rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:unionOf ( :HWResource
+                                              :SWResource
+                                            )
+                              ] ;
+          rdfs:subClassOf :InternalElement .
+
+
+###  https://example.org/mdd4cps/pim#SWResource
+:SWResource rdf:type owl:Class ;
+            rdfs:subClassOf :Resource .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/mdd4cps/pim#AND
+:AND rdf:type owl:NamedIndividual ,
+              :RefinementOperatorType .
+
+
+###  https://example.org/mdd4cps/pim#OR
+:OR rdf:type owl:NamedIndividual ,
+             :RefinementOperatorType .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Action
+                :MessageReceiver
+                :MessageSender
+                :RefinementOperator
+                :Resource
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

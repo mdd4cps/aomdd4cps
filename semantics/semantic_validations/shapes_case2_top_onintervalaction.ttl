@@ -1,0 +1,31 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix :    <https://example.org/mdd4cps/pim#> .
+
+#################################################################
+# Case 2 — Every CPComponent must contain at least one TOP
+# OnIntervalAction, i.e., an OnIntervalAction that is NOT a child
+# of any RefinementOperator.
+#
+# "Top" criterion:
+#   maxCount 0 on inverse(hasChildAction)
+#################################################################
+
+:CPComponent_MustHaveTopOnInterval
+  a sh:NodeShape ;
+  sh:targetClass :CPComponent ;
+
+  sh:property [
+    sh:path :containsElement ;
+    sh:qualifiedValueShape [
+      sh:class :OnIntervalAction ;
+      # Top: no incoming hasChildAction
+      sh:property [
+        sh:path [ sh:inversePath :hasChildAction ] ;
+        sh:maxCount 0 ;
+        sh:message "A top OnIntervalAction must NOT be a child of any RefinementOperator."
+      ] ;
+    ] ;
+    sh:qualifiedMinCount 1 ;
+    sh:message "Each CPComponent must contain at least one TOP OnIntervalAction."
+  ] .
+

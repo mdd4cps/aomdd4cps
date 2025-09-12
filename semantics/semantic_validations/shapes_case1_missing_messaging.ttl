@@ -1,0 +1,46 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix :    <https://example.org/mdd4cps/pim#> .
+
+#################################################################
+# Case 1 — Every CPComponent must have ACTUAL messaging:
+# EITHER it contains a MessageSender that deliversTo a MessageReceiver,
+# OR it contains a MessageReceiver that is targeted by some MessageSender.
+#################################################################
+
+:CPComponent_MustHaveMessaging
+  a sh:NodeShape ;
+  sh:targetClass :CPComponent ;
+
+  sh:or (
+    # Option A: at least one contained MessageSender that deliversTo a MessageReceiver
+    [ sh:property [
+        sh:path :containsElement ;
+        sh:qualifiedValueShape [
+          sh:class :MessageSender ;
+          sh:property [
+            sh:path :deliversTo ;
+            sh:minCount 1 ;
+            sh:class :MessageReceiver ;
+            sh:message "Contained MessageSender must deliverTo a MessageReceiver."
+          ] ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "CPComponent must contain an active MessageSender (with deliversTo) or an active MessageReceiver (with an incoming delivery)."
+      ] ]
+
+    # Option B: at least one contained MessageReceiver that has an incoming delivery from some MessageSender
+    [ sh:property [
+        sh:path :containsElement ;
+        sh:qualifiedValueShape [
+          sh:class :MessageReceiver ;
+          sh:property [
+            sh:path [ sh:inversePath :deliversTo ] ;  # <-- inverse path, SHACL-Core syntax
+            sh:minCount 1 ;
+            sh:message "Contained MessageReceiver must be the target of at least one MessageSender (incoming deliversTo)."
+          ] ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "CPComponent must contain an active MessageReceiver (with an incoming delivery) or an active MessageSender (with deliversTo)."
+      ] ]
+  ) .
+

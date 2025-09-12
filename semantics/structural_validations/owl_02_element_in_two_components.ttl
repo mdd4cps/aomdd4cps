@@ -1,0 +1,20 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Ensure the property is treated semantically
+:isContainedIn a owl:ObjectProperty .
+
+### Two distinct CPComponents
+tc:CompA a :CPComponent ;
+  :name "Component A" .
+
+tc:CompB a :CPComponent ;
+  :name "Component B" ;
+  owl:differentFrom tc:CompA .
+
+### One InternalElement (MessageSender) wrongly contained in BOTH components
+tc:MS a :MessageSender ;
+  :name "Shared internal element" ;
+  :isContainedIn tc:CompA , tc:CompB .
+

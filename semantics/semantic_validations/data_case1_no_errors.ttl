@@ -1,0 +1,85 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# PIM test case (OK): Heater <— messaging — Thermometer
+# - Heater has a MessageReceiver: "Temperature data - message receiver"
+# - Thermometer has a MessageSender: "Temperature data - message sender"
+# - Sender deliversTo Receiver  ✅
+# - containsElement/isContainedIn asserted for SHACL traversal  ✅
+#################################################################
+
+########## Components
+tc:Heater a :CPComponent ;
+  :name "Heater" .
+
+tc:Thermometer a :CPComponent ;
+  :name "Thermometer" .
+
+########## Heater internals
+tc:HeatingElement a :Resource ;
+  :name "Heating element" ;
+  :isContainedIn tc:Heater .
+tc:Heater :containsElement tc:HeatingElement .
+
+tc:ControlHeater a :OnDemandAction ;
+  :name "Control the heater" ;
+  :isContainedIn tc:Heater ;
+  :extractsFrom tc:HeatingElement .
+tc:Heater :containsElement tc:ControlHeater .
+
+tc:MaintainTargetTemperature a :OnIntervalAction ;
+  :name "Maintain target temperature" ;
+  :isContainedIn tc:Heater ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :hasRefinementOperator tc:Heater_AND .
+tc:Heater :containsElement tc:MaintainTargetTemperature .
+
+tc:Heater_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ControlHeater .
+tc:Heater :containsElement tc:Heater_AND .
+
+# Heater message receiver
+tc:Heater_TempData_Rx a :MessageReceiver ;
+  :name "Temperature data - message receiver" ;
+  :isContainedIn tc:Heater .
+tc:Heater :containsElement tc:Heater_TempData_Rx .
+
+########## Thermometer internals
+tc:DHT11 a :Resource ;
+  :name "DHT11 sensor" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:DHT11 .
+
+tc:ReadDHT11 a :OnIntervalAction ;
+  :name "Read the DHT11 sensor" ;
+  :isContainedIn tc:Thermometer ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :extractsFrom tc:DHT11 .
+tc:Thermometer :containsElement tc:ReadDHT11 .
+
+tc:ReportTemperature a :OnDemandAction ;
+  :name "Report temperature" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:ReportTemperature .
+
+tc:TemperatureMeasurement a :OnDemandAction ;
+  :name "Temperature measurement" ;
+  :isContainedIn tc:Thermometer ;
+  :hasRefinementOperator tc:Thermo_AND .
+tc:Thermometer :containsElement tc:TemperatureMeasurement .
+
+tc:Thermo_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ReadDHT11 , tc:ReportTemperature .
+tc:Thermometer :containsElement tc:Thermo_AND .
+
+# Thermometer message sender
+tc:Thermo_TempData_Tx a :MessageSender ;
+  :name "Temperature data - message sender" ;
+  :isContainedIn tc:Thermometer ;
+  :deliversTo tc:Heater_TempData_Rx .
+tc:Thermometer :containsElement tc:Thermo_TempData_Tx .
+

@@ -1,0 +1,66 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://www.w3.org/mdd4cps/testcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Case 4 (FAIL) — Canonical PIM with bad intervals:
+#  - Heater's OnIntervalAction has 0  (violates minInclusive 1).
+#  - Thermometer's OnIntervalAction has non-integer lexical form ("fast").
+#################################################################
+
+########## Components
+tc:Heater a :CPComponent ;        :name "Heater" .
+tc:Thermometer a :CPComponent ;   :name "Thermometer" .
+
+########## Heater internals (FAIL: interval = 0)
+tc:HeatingElement a :HWResource ;
+  :name "Heating element" ;
+  :isContainedIn tc:Heater .
+tc:Heater :containsElement tc:HeatingElement .
+
+tc:ControlHeater a :OnDemandAction ;
+  :name "Control the heater" ;
+  :isContainedIn tc:Heater ;
+  :extractsFrom tc:HeatingElement .
+tc:Heater :containsElement tc:ControlHeater .
+
+tc:MaintainTargetTemperature a :OnIntervalAction ;  # TOP, but bad interval
+  :name "Maintain target temperature" ;
+  :isContainedIn tc:Heater ;
+  :interval_in_milliseconds "0"^^xsd:integer ;   # ❌ violates >= 1
+  :hasRefinementOperator tc:Heater_AND .
+tc:Heater :containsElement tc:MaintainTargetTemperature .
+
+tc:Heater_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ControlHeater .
+tc:Heater :containsElement tc:Heater_AND .
+
+########## Thermometer internals (FAIL: non-integer lexical form)
+tc:DHT11 a :HWResource ;
+  :name "DHT11 sensor" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:DHT11 .
+
+tc:ReadDHT11 a :OnDemandAction ;
+  :name "Read the DHT11 sensor" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:ReadDHT11 .
+
+tc:ReportTemperature a :OnDemandAction ;
+  :name "Report temperature" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:ReportTemperature .
+
+tc:TemperatureMonitoring a :OnIntervalAction ;  # TOP, but bad datatype/lexical value
+  :name "Temperature monitoring" ;
+  :isContainedIn tc:Thermometer ;
+  :interval_in_milliseconds "fast"^^xsd:string ;  # ❌ not xsd:integer
+  :hasRefinementOperator tc:Thermo_AND .
+tc:Thermometer :containsElement tc:TemperatureMonitoring .
+
+tc:Thermo_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ReadDHT11 , tc:ReportTemperature .
+tc:Thermometer :containsElement tc:Thermo_AND .
+

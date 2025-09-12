@@ -1,0 +1,1 @@
+	$ pyshacl -s shapes.ttl -d <(cat ontology.ttl data_case.ttl) -i owlrl -o report_case.ttl

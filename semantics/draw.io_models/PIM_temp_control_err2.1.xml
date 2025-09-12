@@ -1,0 +1,127 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="Page-1" id="bIUvuRWgY_ht7-Kiq_Qw">
+    <mxGraphModel dx="1426" dy="885" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <object label="Heater" type="cps_component" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-5" name="Heater" description="" id="YvtLxscB_G1wt4JuAX6Y-2">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+            <mxGeometry x="25" y="25" width="450" height="265" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Control the heater" type="action" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-12" name="Control the heater" input_parameters="[]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" id="YvtLxscB_G1wt4JuAX6Y-12">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;" parent="YvtLxscB_G1wt4JuAX6Y-2" vertex="1">
+            <mxGeometry x="43.00104172257677" y="66.89636363636365" width="121.7316870955081" height="68.72727272727272" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Maintain target temperature" type="operational_goal" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-7" name="Maintain target temperature" qualification_array="[]" contribution_array="[{ &quot;softgoal_id&quot;: &quot;YvtLxscB_G1wt4JuAX6Y-8&quot;, &quot;name&quot;: &quot;Energy efficiency&quot;, &quot;contribution&quot;: &quot;hurt&quot;}]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="200" id="YvtLxscB_G1wt4JuAX6Y-7">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="YvtLxscB_G1wt4JuAX6Y-2" vertex="1">
+            <mxGeometry x="315.0031651009348" y="41.99727272727273" width="118.52822164562632" height="118.52822164562632" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-13" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-13">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-2" source="YvtLxscB_G1wt4JuAX6Y-12" target="YvtLxscB_G1wt4JuAX6Y-7-operator-and_ref_operator" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint as="sourcePoint" />
+              <mxPoint as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="AND" name="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-13" type="and_ref_operator" id="YvtLxscB_G1wt4JuAX6Y-7-operator-and_ref_operator">
+          <mxCell style="shape=or;whiteSpace=wrap;html=1;" parent="YvtLxscB_G1wt4JuAX6Y-2" vertex="1">
+            <mxGeometry x="206.9970805970394" y="61.261363636363654" width="60" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-13" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-7-targetRelationshipand_ref_operator">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-2" source="YvtLxscB_G1wt4JuAX6Y-7-operator-and_ref_operator" target="YvtLxscB_G1wt4JuAX6Y-7" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint as="sourcePoint" />
+              <mxPoint as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Heating element" type="hw_resource" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-9" name="Heating element" qualification_array="[{ &quot;softgoal_id&quot;: &quot;YvtLxscB_G1wt4JuAX6Y-8&quot;, &quot;name&quot;: &quot;Energy efficiency&quot;}]" contribution_array="[]" id="YvtLxscB_G1wt4JuAX6Y-9">
+          <mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" parent="YvtLxscB_G1wt4JuAX6Y-2" vertex="1">
+            <mxGeometry x="15.001687095508146" y="191.99818181818182" width="107.31609257104003" height="49.090909090909086" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-14" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-14">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-2" source="YvtLxscB_G1wt4JuAX6Y-9" target="YvtLxscB_G1wt4JuAX6Y-12" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="313.9396140884157" y="507.27272727272725" as="sourcePoint" />
+              <mxPoint x="538.1821955801411" y="507.27272727272725" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Thermometer" type="cps_component" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-19" name="Thermometer" description="" id="YvtLxscB_G1wt4JuAX6Y-16">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+            <mxGeometry x="271" y="360" width="510" height="309" as="geometry">
+              <mxRectangle x="44" width="49.05" height="44" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Temperature measurement" type="operational_goal" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-21" name="Temperature measurement" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" interval_in_milliseconds="200" id="YvtLxscB_G1wt4JuAX6Y-21">
+          <mxCell style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="YvtLxscB_G1wt4JuAX6Y-16" vertex="1">
+            <mxGeometry x="339.00231828057866" y="34.87272727272727" width="156.170008503554" height="156.170008503554" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="Report temperature" type="action" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-22" name="Report temperature" input_parameters="[]" output_parameters="[]" qualification_array="[]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" id="YvtLxscB_G1wt4JuAX6Y-22">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;" parent="YvtLxscB_G1wt4JuAX6Y-16" vertex="1">
+            <mxGeometry x="30.003021383191435" y="43.00454545454545" width="125.25549909037807" height="55.90909090909091" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-28" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-28">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-16" source="YvtLxscB_G1wt4JuAX6Y-22" target="YvtLxscB_G1wt4JuAX6Y-21-operator-and_ref_operator" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint as="sourcePoint" />
+              <mxPoint as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="AND" name="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-28" type="and_ref_operator" id="YvtLxscB_G1wt4JuAX6Y-21-operator-and_ref_operator">
+          <mxCell style="shape=or;whiteSpace=wrap;html=1;" parent="YvtLxscB_G1wt4JuAX6Y-16" vertex="1">
+            <mxGeometry x="200.00404673036806" y="72.9581818181818" width="60" height="80" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-28" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-21-targetRelationshipand_ref_operator">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-16" source="YvtLxscB_G1wt4JuAX6Y-21-operator-and_ref_operator" target="YvtLxscB_G1wt4JuAX6Y-21" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint as="sourcePoint" />
+              <mxPoint as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="Read the DHT11 sensor" type="action" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-23" name="Read the DHT11 sensor" input_parameters="[]" output_parameters="[]" qualification_array="[{ &quot;softgoal_id&quot;: &quot;YvtLxscB_G1wt4JuAX6Y-24&quot;, &quot;name&quot;: &quot;Energy efficiency&quot;}]" contribution_array="[]" operation_modes_enabled="false" operation_modes_description="" id="YvtLxscB_G1wt4JuAX6Y-23">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;" parent="YvtLxscB_G1wt4JuAX6Y-16" vertex="1">
+            <mxGeometry x="40.93000000000001" y="152.96000000000004" width="114.33" height="37.03" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-29" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-29">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-16" source="YvtLxscB_G1wt4JuAX6Y-23" target="YvtLxscB_G1wt4JuAX6Y-21-operator-and_ref_operator" edge="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint as="sourcePoint" />
+              <mxPoint as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+        <object label="DHT11 sensor" type="hw_resource" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-25" name="DHT11 sensor" qualification_array="[]" contribution_array="[]" id="YvtLxscB_G1wt4JuAX6Y-25">
+          <mxCell style="verticalAlign=middle;align=center;shape=cube;spacingTop=8;spacingLeft=2;spacingRight=12;size=10;direction=south;fontStyle=0;html=1;whiteSpace=wrap;" parent="YvtLxscB_G1wt4JuAX6Y-16" vertex="1">
+            <mxGeometry x="18" y="250" width="98" height="37" as="geometry" />
+          </mxCell>
+        </object>
+        <object label="" id_cim_parent="YvtLxscB_G1wt4JuAX6Y-30" type="relation_from_to" id="YvtLxscB_G1wt4JuAX6Y-30">
+          <mxCell style="endArrow=classic;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle; " parent="YvtLxscB_G1wt4JuAX6Y-16" source="YvtLxscB_G1wt4JuAX6Y-25" target="YvtLxscB_G1wt4JuAX6Y-23" edge="1">
+            <mxGeometry x="0.5714" y="-20" width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="301.3393166522138" y="55.90909090909088" as="sourcePoint" />
+              <mxPoint x="555.4809090095027" y="55.90909090909088" as="targetPoint" />
+              <mxPoint as="offset" />
+            </mxGeometry>
+          </mxCell>
+        </object>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

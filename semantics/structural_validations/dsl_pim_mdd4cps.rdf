@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="https://example.org/mdd4cps/pim#"
+    xml:base="https://example.org/mdd4cps/pim"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="https://example.org/mdd4cps/pim"/>
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#containsElement -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#containsElement">
+        <owl:inverseOf rdf:resource="https://example.org/mdd4cps/pim#isContainedIn"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#deliversTo -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#deliversTo">
+        <owl:inverseOf rdf:resource="https://example.org/mdd4cps/pim#hasSender"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#MessageReceiver"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#extractsFrom -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#extractsFrom">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#forwardsTo -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#forwardsTo">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageReceiver"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasChildAction -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasChildAction">
+        <owl:inverseOf rdf:resource="https://example.org/mdd4cps/pim#hasParentAction"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#RefinementOperator"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasComponent">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#CPModel"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasElement -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasElement">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#CPModel"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#hasComponent"/>
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#containsElement"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasParentAction -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasParentAction">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#RefinementOperator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasRefinementOperator -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasRefinementOperator">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#RefinementOperator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasRefinementType -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasRefinementType">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#RefinementOperator"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#RefinementOperatorType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#hasSender -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#hasSender">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageReceiver"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#isContainedIn -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#isContainedIn">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#isNeededBy -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#isNeededBy">
+        <owl:inverseOf rdf:resource="https://example.org/mdd4cps/pim#needsResource"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#Resource"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#OnDemandAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#needsResource -->
+
+    <owl:ObjectProperty rdf:about="https://example.org/mdd4cps/pim#needsResource">
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#OnDemandAction"/>
+        <rdfs:range rdf:resource="https://example.org/mdd4cps/pim#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#cim_dependeeElmnt_is_softgoal -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#cim_dependeeElmnt_is_softgoal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#cim_dependerElmnt_is_softgoal -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#cim_dependerElmnt_is_softgoal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageReceiver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#contribution_array -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#contribution_array">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Action"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#data_structure -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#data_structure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#SWResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#dependum_data_structure -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#dependum_data_structure">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#description -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#id -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#id_cim_name -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#id_cim_name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#CPComponent"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#InternalElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#id_cim_parent -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#id_cim_parent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#CPComponent"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#InternalElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#id_cim_type -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#id_cim_type">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#CPComponent"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#InternalElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#ifsg_softgoal_id -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#ifsg_softgoal_id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#ifsg_softgoal_name -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#ifsg_softgoal_name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#input_parameters -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#input_parameters">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#OnDemandAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#interval_in_milliseconds -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#interval_in_milliseconds">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#OnIntervalAction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#name -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#operation_modes_description -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#operation_modes_description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#operation_modes_enabled -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#operation_modes_enabled">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#output_parameters -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#output_parameters">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://example.org/mdd4cps/pim#OnDemandAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#qualification_array -->
+
+    <owl:DatatypeProperty rdf:about="https://example.org/mdd4cps/pim#qualification_array">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Action"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#Action -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#Action">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#OnDemandAction"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#OnIntervalAction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#hasRefinementOperator"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#RefinementOperator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#CPComponent -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#CPComponent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#containsElement"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#CPModel -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#CPModel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#HWResource -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#HWResource">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#Resource"/>
+        <owl:disjointWith rdf:resource="https://example.org/mdd4cps/pim#SWResource"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#InternalElement -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#InternalElement">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Action"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#RefinementOperator"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Resource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#isContainedIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#CPComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#MessageReceiver -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#MessageReceiver">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#forwardsTo"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#hasSender"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#MessageSender"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#MessageSender -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#MessageSender">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#deliversTo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#MessageReceiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#extractsFrom"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#interval_in_milliseconds"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#OnDemandAction -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#OnDemandAction">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <owl:disjointWith rdf:resource="https://example.org/mdd4cps/pim#OnIntervalAction"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#OnIntervalAction -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#OnIntervalAction">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#interval_in_milliseconds"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#RefinementOperator -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#RefinementOperator">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#hasChildAction"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://example.org/mdd4cps/pim#hasRefinementType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#RefinementOperatorType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://example.org/mdd4cps/pim#hasParentAction"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://example.org/mdd4cps/pim#Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#RefinementOperatorType -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#RefinementOperatorType"/>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#Resource -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#Resource">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#HWResource"/>
+                    <rdf:Description rdf:about="https://example.org/mdd4cps/pim#SWResource"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#InternalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#SWResource -->
+
+    <owl:Class rdf:about="https://example.org/mdd4cps/pim#SWResource">
+        <rdfs:subClassOf rdf:resource="https://example.org/mdd4cps/pim#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#AND -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/mdd4cps/pim#AND">
+        <rdf:type rdf:resource="https://example.org/mdd4cps/pim#RefinementOperatorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://example.org/mdd4cps/pim#OR -->
+
+    <owl:NamedIndividual rdf:about="https://example.org/mdd4cps/pim#OR">
+        <rdf:type rdf:resource="https://example.org/mdd4cps/pim#RefinementOperatorType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Action"/>
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageReceiver"/>
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#MessageSender"/>
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#RefinementOperator"/>
+            <rdf:Description rdf:about="https://example.org/mdd4cps/pim#Resource"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,86 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# Case 5 (FAIL) — id_cim_type = "task"
+# Sender is missing :extractsFrom; Receiver is missing :forwardsTo.
+# Sender still provides dependum_data_structure and deliversTo.
+# Validation MUST FAIL under shapes_case5_message_structures.ttl
+#################################################################
+
+########## Components
+tc:Heater a :CPComponent ;        :name "Heater" .
+tc:Thermometer a :CPComponent ;   :name "Thermometer" .
+
+########## Heater internals
+tc:HeatingElement a :HWResource ;  # physical actuator
+  :name "Heating element" ;
+  :isContainedIn tc:Heater .
+tc:Heater :containsElement tc:HeatingElement .
+
+tc:ControlHeater a :OnDemandAction ;
+  :name "Control the heater" ;
+  :isContainedIn tc:Heater ;
+  :extractsFrom tc:HeatingElement .
+tc:Heater :containsElement tc:ControlHeater .
+
+tc:MaintainTargetTemperature a :OnIntervalAction ;
+  :name "Maintain target temperature" ;
+  :isContainedIn tc:Heater ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :hasRefinementOperator tc:Heater_AND .
+tc:Heater :containsElement tc:MaintainTargetTemperature .
+
+tc:Heater_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ControlHeater .
+tc:Heater :containsElement tc:Heater_AND .
+
+# Receiver (task → forwardsTo REQUIRED but missing → ERROR)
+tc:Heater_Rx a :MessageReceiver ;
+  :name "Temperature data - message receiver" ;
+  :isContainedIn tc:Heater ;
+  :id_cim_type "task" .
+  # ❌ Missing :forwardsTo (required for non-softgoal)
+tc:Heater :containsElement tc:Heater_Rx .
+
+########## Thermometer internals
+tc:DHT11 a :HWResource ;  # physical sensor
+  :name "DHT11 sensor" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:DHT11 .
+
+tc:ReadDHT11 a :OnIntervalAction ;
+  :name "Read the DHT11 sensor" ;
+  :isContainedIn tc:Thermometer ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :extractsFrom tc:DHT11 .
+tc:Thermometer :containsElement tc:ReadDHT11 .
+
+tc:ReportTemperature a :OnDemandAction ;
+  :name "Report temperature" ;
+  :isContainedIn tc:Thermometer .
+tc:Thermometer :containsElement tc:ReportTemperature .
+
+tc:Thermo_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ReadDHT11 , tc:ReportTemperature .
+tc:Thermometer :containsElement tc:Thermo_AND .
+
+tc:TemperatureMeasurement a :OnDemandAction ;
+  :name "Temperature measurement" ;
+  :isContainedIn tc:Thermometer ;
+  :hasRefinementOperator tc:Thermo_AND .
+tc:Thermometer :containsElement tc:TemperatureMeasurement .
+
+########## Messaging (task → extractsFrom REQUIRED but missing → ERROR)
+tc:Thermo_Tx a :MessageSender ;
+  :name "Temperature data - message sender" ;
+  :isContainedIn tc:Thermometer ;
+  :id_cim_type "task" ;
+  :deliversTo tc:Heater_Rx ;
+  :dependum_data_structure """{ "temp_instant_value": "number" }""" .
+  # ❌ Missing :extractsFrom (required for non-softgoal)
+tc:Thermometer :containsElement tc:Thermo_Tx .
+

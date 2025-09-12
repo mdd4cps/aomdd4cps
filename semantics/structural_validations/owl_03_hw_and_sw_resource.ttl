@@ -1,0 +1,16 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Ensure the containment property is treated as an object property
+:isContainedIn a owl:ObjectProperty .
+
+### Minimal hosting component to satisfy 'InternalElement ⊑ isContainedIn exactly 1 CPComponent'
+tc:Comp a :CPComponent ;
+  :name "Component X" .
+
+### Offending individual: both HWResource and SWResource (disjoint classes)
+tc:Res a :HWResource , :SWResource ;
+  :name "Resource with conflicting types" ;
+  :isContainedIn tc:Comp .
+

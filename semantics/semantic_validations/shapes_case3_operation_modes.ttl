@@ -1,0 +1,44 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix :    <https://example.org/mdd4cps/pim#> .
+
+#################################################################
+# Case 3 — If operation_modes_enabled=true → require a non-empty
+#          operation_modes_description (string with at least 1
+#          non-whitespace char). Works for both OnIntervalAction
+#          and OnDemandAction, or any node that has the property.
+#
+# Target strategy:
+#   target subjects that actually use :operation_modes_enabled
+#################################################################
+
+:ActionOperationModesShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf :operation_modes_enabled ;
+
+  # The property, when present, must be boolean
+  sh:property [
+    sh:path :operation_modes_enabled ;
+    sh:datatype xsd:boolean ;
+    sh:message "operation_modes_enabled must be a boolean (xsd:boolean)."
+  ] ;
+
+  # If enabled=true, then description must be present and non-empty
+  sh:or (
+    [ sh:not [
+        sh:property [
+          sh:path :operation_modes_enabled ;
+          sh:hasValue true
+        ]
+      ]
+    ]
+    [ sh:property [
+        sh:path :operation_modes_description ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "\\S" ;
+        sh:message "operation_modes_enabled=true requires a non-empty operation_modes_description."
+      ]
+    ]
+  ) .
+

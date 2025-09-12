@@ -1,0 +1,75 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################################################
+# PIM test case: Two CPComponents (Heater, Thermometer) with NO messaging
+# Mirrors the diagram: actions/resources inside each component,
+# refinement via AND, but **no** MessageSender/MessageReceiver.
+#################################################################
+
+########## Components
+tc:Heater a :CPComponent ;
+  :name "Heater" .
+
+tc:Thermometer a :CPComponent ;
+  :name "Thermometer" .
+
+########## Heater internals
+# Resource
+tc:HeatingElement a :Resource ;
+  :name "Heating element" ;
+  :isContainedIn tc:Heater .
+
+# Child action
+tc:ControlHeater a :OnDemandAction ;
+  :name "Control the heater" ;
+  :isContainedIn tc:Heater ;
+  :extractsFrom tc:HeatingElement .
+
+# Top/parent action (periodic)
+tc:MaintainTargetTemperature a :OnIntervalAction ;
+  :name "Maintain target temperature" ;
+  :isContainedIn tc:Heater ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :hasRefinementOperator tc:Heater_AND .
+
+# Refinement operator (AND) for Heater
+tc:Heater_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ControlHeater .
+
+########## Thermometer internals
+# Resource
+tc:DHT11 a :Resource ;
+  :name "DHT11 sensor" ;
+  :isContainedIn tc:Thermometer .
+
+# Child actions
+tc:ReadDHT11 a :OnIntervalAction ;
+  :name "Read the DHT11 sensor" ;
+  :isContainedIn tc:Thermometer ;
+  :interval_in_milliseconds "1000"^^xsd:integer ;
+  :extractsFrom tc:DHT11 .
+
+tc:ReportTemperature a :OnDemandAction ;
+  :name "Report temperature" ;
+  :isContainedIn tc:Thermometer .
+
+# Top/parent action (goal-like behavior)
+tc:TemperatureMeasurement a :OnDemandAction ;
+  :name "Temperature measurement" ;
+  :isContainedIn tc:Thermometer ;
+  :hasRefinementOperator tc:Thermometer_AND .
+
+# Refinement operator (AND) for Thermometer
+tc:Thermometer_AND a :RefinementOperator ;
+  :hasRefinementType :AND ;
+  :hasChildAction tc:ReadDHT11 , tc:ReportTemperature .
+
+########## NOTE
+# Intentionally no MessageSender / MessageReceiver instances,
+# and therefore no deliversTo/extractsFrom/forwardsTo messaging edges
+# between Heater and Thermometer. This is the *faulty* PIM we want
+# SHACL to flag (case 1).
+

@@ -1,0 +1,23 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix :    <https://example.org/mdd4cps/pim#> .
+
+#################################################################
+# Case 4 — Every OnIntervalAction must have interval_in_milliseconds:
+#   - present (minCount 1)
+#   - datatype xsd:integer
+#   - value >= 1
+#################################################################
+
+:OnIntervalAction_IntervalShape
+  a sh:NodeShape ;
+  sh:targetClass :OnIntervalAction ;
+
+  sh:property [
+    sh:path :interval_in_milliseconds ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+    sh:message "OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1."
+  ] .
+

@@ -1,0 +1,24 @@
+Validation Report
+Conforms: False
+Results (3):
+Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:integer ; sh:message Literal("OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:minInclusive Literal("1", datatype=xsd:integer) ; sh:path :interval_in_milliseconds ]
+	Focus Node: tc:MaintainTargetTemperature
+	Value Node: Literal("0", datatype=xsd:integer)
+	Result Path: :interval_in_milliseconds
+	Message: OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.
+Constraint Violation in DatatypeConstraintComponent (http://www.w3.org/ns/shacl#DatatypeConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:integer ; sh:message Literal("OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:minInclusive Literal("1", datatype=xsd:integer) ; sh:path :interval_in_milliseconds ]
+	Focus Node: tc:TemperatureMonitoring
+	Value Node: Literal("fast", datatype=xsd:string)
+	Result Path: :interval_in_milliseconds
+	Message: OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.
+Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:datatype xsd:integer ; sh:message Literal("OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.") ; sh:minCount Literal("1", datatype=xsd:integer) ; sh:minInclusive Literal("1", datatype=xsd:integer) ; sh:path :interval_in_milliseconds ]
+	Focus Node: tc:TemperatureMonitoring
+	Value Node: Literal("fast", datatype=xsd:string)
+	Result Path: :interval_in_milliseconds
+	Message: OnIntervalAction requires :interval_in_milliseconds as xsd:integer >= 1.

@@ -1,0 +1,26 @@
+@prefix :    <https://example.org/mdd4cps/pim#> .
+@prefix tc:  <http://example.org/mdd4cps/testcase#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+### Ensure semantic (not annotation) property
+:hasRefinementOperator a owl:ObjectProperty .
+
+### Minimal hosting component to satisfy domain/range constraints
+tc:Comp a :CPComponent ;
+  :name "Component A" .
+
+### The two distinct refinement operators
+tc:R1 a :RefinementOperator ;
+  :name "First operator" .
+
+tc:R2 a :RefinementOperator ;
+  :name "Second operator" ;
+  owl:differentFrom tc:R1 .
+
+### Offending action: two refinement operators (violates max 1)
+tc:A1 a :OnIntervalAction ;
+  :name "Action with two operators" ;
+  :isContainedIn tc:Comp ;
+  :hasRefinementOperator tc:R1 , tc:R2 .
+
