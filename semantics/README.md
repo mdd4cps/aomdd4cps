@@ -35,5 +35,5 @@ Together, these artifacts demonstrate how semantic technologies can strengthen t
 
 ---
 
-🔗 For more details, see the [project repository root](../..).
+🔗 For more details, see the [project repository root](..).
 
