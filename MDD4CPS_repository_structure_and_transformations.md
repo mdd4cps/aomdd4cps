@@ -55,35 +55,34 @@ The backend script `psm_to_code-arduinomkr1010.py` implements the generation of 
 
 ## CIM-to-PIM Transformation
 
-### Purpose
+### Principal Construct Mappings
 
-The CIM-to-PIM transformation converts CIM models into the intermediate DSL used by MDD4CPS. This stage preserves relevant modelling information and incorporates additional design decisions required to obtain a complete PIM representation.
-
-Some information cannot be inferred directly from the CIM model and therefore must be provided by the designer during the transformation process.
-
-### Repository Artefacts
-
-| Artefact | Role |
-|-----------|--------|
-| `CIM-PIM-Rules.json` | Defines the information requested from the designer during the transformation process. |
-| `CIM-PIM.xsl` | Main XSLT transformation implementing the CIM-to-PIM mapping. |
-| `CIM-PIM-Aux.xsl` | Auxiliary templates and functions used by the main transformation. |
+| CIM Construct | PIM Construct / Representation |
+|--------------|--------------------------------|
+| Actor / Agent / Role marked as CPC | `cps_component` |
+| Goal | `operational_goal` |
+| Task | `action` |
+| Resource | `hw_resource` or `sw_resource` |
+| Needed-by relationship | `relation_from_to` |
+| Refinement relationship | `relation_from_to` plus refinement operator |
+| Dependency | `listener_thread`, `comm_thread`, `comm_relation`, `mail_symbol` |
+| Softgoal | Qualification and contribution metadata attached to generated elements |
 
 ### Implementation Notes
 
-During this stage, additional information may be requested from the designer through the rule definitions contained in `CIM-PIM-Rules.json`. Once collected, the CIM model is processed by the XSLT transformations to generate the corresponding PIM representation.
-
-The transformation logic is implemented in the XSLT files located under:
+The CIM-to-PIM transformation is implemented mainly in:
 
 ```text
-src/frontend/static/input/xsl/
+src/frontend/static/input/xsl/CIM-PIM.xsl
 ```
 
-while the interaction rules are located under:
+with an auxiliary post-processing step in:
 
 ```text
-src/frontend/static/input/json/
+src/frontend/static/input/xsl/CIM-PIM-Aux.xsl
 ```
+
+The auxiliary XSLT removes duplicated objects generated during the transformation, preserving a valid draw.io model.
 
 ---
 
@@ -91,34 +90,41 @@ src/frontend/static/input/json/
 
 ### Purpose
 
-The PIM-to-PSM transformation restructures and enriches the intermediate DSL representation in preparation for automatic source-code generation.
+The PIM-to-PSM stage prepares the enriched PIM model for source-code generation. Rather than defining a completely new modelling notation, this transformation restructures the PIM elements into an XML representation that can be processed directly by the code generator.
 
-This stage organises the model according to the requirements of the target implementation technology and produces a representation intended to support subsequent code generation activities.
+### PIM Elements Processed
 
-### Repository Artefacts
-
-| Artefact | Role |
-|-----------|--------|
-| `PIM-PSM-Rules.json` | Defines the information requested from the designer during the transformation process. |
-| `PIM-PSM.xsl` | XSLT transformation that restructures and preprocesses the PIM model into a code-generation-oriented representation. |
+| PIM Element | PSM Representation |
+|------------|--------------------|
+| `cps_component` | `cpc` |
+| `sw_resource` | `sw_resource` |
+| `hw_resource` | `hw_resource` |
+| `action` | `function` |
+| `operational_goal` | `thread` |
+| `relation_from_to` | `relation` |
+| `comm_thread` | `commThread` |
+| `listener_thread` | `listenerThread` |
+| `comm_relation` | `commRelation` |
 
 ### Implementation Notes
 
-As in the previous stage, additional information may be requested from the designer through the rule definitions contained in `PIM-PSM-Rules.json`.
-
-The transformation logic is implemented in:
+The transformation is implemented in:
 
 ```text
 src/frontend/static/input/xsl/PIM-PSM.xsl
 ```
 
-while the interaction rules are located in:
+This XSLT groups the model by `cps_component` and creates one `cpc` element for each cyber-physical component. Inside each `cpc`, it collects the related resources, actions, operational goals, relations, communication threads, listener threads, and communication relations.
+
+The technological enrichment required for code generation is guided by:
 
 ```text
-src/frontend/static/input/json/
+src/frontend/static/input/json/PIM-PSM-Rules.json
 ```
 
-Unlike the CIM-to-PIM stage, the resulting representation is primarily intended to support the subsequent source-code generation process rather than to serve as a standalone modelling notation.
+This JSON file requests information such as parameter types, operation modes, hardware integration descriptions, and data structures. The XSLT then propagates this information into the intermediate PSM representation.
+
+Therefore, the PIM-to-PSM stage should be understood mainly as a preprocessing and structuring stage for code generation.
 
 ---
 
@@ -126,19 +132,9 @@ Unlike the CIM-to-PIM stage, the resulting representation is primarily intended 
 
 ### Purpose
 
-The PSM-to-Code transformation generates deployable source code from the PSM representation.
-
-In the current proof-of-concept implementation, the target platform is Arduino MKR1010. This stage automates the generation of technology-specific infrastructure and repetitive implementation elements while preserving extension points for manual customisation.
-
-### Repository Artefacts
-
-| Artefact | Role |
-|-----------|--------|
-| `psm_to_code-arduinomkr1010.py` | Generates Arduino MKR1010 source code from the PSM representation. |
+The PSM-to-Code stage generates Arduino MKR1010 source code from the intermediate PSM XML representation.
 
 ### Implementation Notes
-
-The code generator processes the PSM representation produced by the previous transformation stages and systematically generates the source files required for deployment on Arduino MKR1010 devices.
 
 The generator is implemented in:
 
@@ -146,14 +142,29 @@ The generator is implemented in:
 src/backend/psm_to_code-arduinomkr1010.py
 ```
 
-The generated code includes technology-specific infrastructure such as communication support, task structures, data definitions, configuration elements, and other boilerplate code required by the target platform.
+The script processes each `cpc` element and generates the corresponding source-code artefacts. In particular, it uses:
+
+| PSM Element | Code Generation Role |
+|------------|----------------------|
+| `cpc` | Generates one Arduino project directory per component |
+| `function` | Generates C/C++ functions |
+| `thread` | Generates FreeRTOS task functions for operational goals |
+| `commThread` | Generates MQTT publishing tasks |
+| `listenerThread` | Generates MQTT receiving tasks and callbacks |
+| `sw_resource` | Generates data structures used by functions |
+| `hw_resource` | Generates contextual comments for hardware integration |
+| `relation` | Generates dependency logic between functions, threads, and resources |
+| `commRelation` | Links communication senders and receivers |
+
+The generated artefacts include `.ino` files, `secrets.h`, `comm_utils.h`, FreeRTOS task creation code, MQTT connectivity code, data structures, callback functions, and boilerplate required for Arduino MKR1010 deployment.
 
 ---
 
 ## Summary of Transformation Artefacts
 
-| Transformation | Artefacts | Technology |
-|----------------|-----------|------------|
-| CIM-to-PIM | `CIM-PIM-Rules.json`, `CIM-PIM.xsl`, `CIM-PIM-Aux.xsl` | JSON, XSLT |
-| PIM-to-PSM | `PIM-PSM-Rules.json`, `PIM-PSM.xsl` | JSON, XSLT |
-| PSM-to-Code | `psm_to_code-arduinomkr1010.py` | Python |
+| Stage | Main Role | Artefacts |
+|------|-----------|-----------|
+| CIM-to-PIM | Converts CIM constructs into PIM DSL constructs | `CIM-PIM-Rules.json`, `CIM-PIM.xsl`, `CIM-PIM-Aux.xsl` |
+| PIM-to-PSM | Enriches and restructures the PIM model into a code-generation-oriented XML representation | `PIM-PSM-Rules.json`, `PIM-PSM.xsl` |
+| PSM-to-Code | Generates Arduino MKR1010 source code from the PSM representation | `psm_to_code-arduinomkr1010.py` |
+
