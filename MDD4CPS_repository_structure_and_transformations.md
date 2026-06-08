@@ -59,7 +59,7 @@ The backend script `psm_to_code-arduinomkr1010.py` implements the generation of 
 
 | CIM Construct | PIM Construct / Representation |
 |--------------|--------------------------------|
-| Actor / Agent / Role marked as CPC | `cps_component` |
+| Actor / Agent / Role marked as CPC | `cp_component` |
 | Goal | `operational_goal` |
 | Task | `action` |
 | Resource | `hw_resource` or `sw_resource` |
@@ -96,7 +96,7 @@ The PIM-to-PSM stage prepares the enriched PIM model for source-code generation.
 
 | PIM Element | PSM Representation |
 |------------|--------------------|
-| `cps_component` | `cpc` |
+| `cp_component` | `cpc` |
 | `sw_resource` | `sw_resource` |
 | `hw_resource` | `hw_resource` |
 | `action` | `function` |
@@ -114,7 +114,7 @@ The transformation is implemented in:
 src/frontend/static/input/xsl/PIM-PSM.xsl
 ```
 
-This XSLT groups the model by `cps_component` and creates one `cpc` element for each cyber-physical component. Inside each `cpc`, it collects the related resources, actions, operational goals, relations, communication threads, listener threads, and communication relations.
+This XSLT groups the model by `cp_component` and creates one `cpc` element for each cyber-physical component. Inside each `cpc`, it collects the related resources, actions, operational goals, relations, communication threads, listener threads, and communication relations.
 
 The technological enrichment required for code generation is guided by:
 
