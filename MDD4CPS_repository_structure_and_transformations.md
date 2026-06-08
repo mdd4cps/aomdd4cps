@@ -147,13 +147,13 @@ The script processes each `cpc` element and generates the corresponding source-c
 | PSM Element | Code Generation Role |
 |------------|----------------------|
 | `cpc` | Generates one Arduino project directory per component |
-| `function` | Generates C/C++ functions |
-| `thread` | Generates FreeRTOS task functions for operational goals |
+| `onDemandAction` | Generates C/C++ functions |
+| `onIntervalAction` | Generates FreeRTOS task functions for operational goals |
 | `commThread` | Generates MQTT publishing tasks |
 | `listenerThread` | Generates MQTT receiving tasks and callbacks |
 | `sw_resource` | Generates data structures used by functions |
 | `hw_resource` | Generates contextual comments for hardware integration |
-| `relation` | Generates dependency logic between functions, threads, and resources |
+| `AND/OR operators` | Generates dependency logic between functions, threads, and resources |
 | `commRelation` | Links communication senders and receivers |
 
 The generated artefacts include `.ino` files, `secrets.h`, `comm_utils.h`, FreeRTOS task creation code, MQTT connectivity code, data structures, callback functions, and boilerplate required for Arduino MKR1010 deployment.
