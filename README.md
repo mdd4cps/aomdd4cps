@@ -5,9 +5,11 @@ A tool designed to implement an Agent-Oriented Model-Driven Development process 
 > This project is a continuation of the original repository [LD-111/MDD4CPS](https://github.com/LD-111/MDD4CPS), which served as the foundation for this implementation. This version introduces revised terminology, enhanced documentation, and ongoing support for future extensions.
 
 > ℹ️ **Resources:**
-> The [`semantics/`](semantics/) directory provides proposed artifacts for structural and semantic validations in the PIM phase of MDD4CPS.  
-> It includes OWL ontologies, SHACL shapes, example CPS models (both correct and faulty), and scripts to reproduce validation experiments.
-> The [MDD4CPS_repository_structure_and_transformations](MDD4CPS_repository_structure_and_transformations.md) document describes how the MDD4CPS transformations are implemented within the repository, including the location and role of the CIM-to-PIM, PIM-to-PSM, and PSM-to-Code transformation artefacts.
+>
+> - The [MDD4CPS_repository_structure_and_transformations](MDD4CPS_repository_structure_and_transformations.md) document describes how the MDD4CPS transformations are implemented within the repository, including the location and role of the CIM-to-PIM, PIM-to-PSM, and PSM-to-Code transformation artefacts.
+>
+> - The [`semantics/`](semantics/) directory provides proposed artefacts for structural and semantic validations in the PIM phase of MDD4CPS. It includes OWL ontologies, SHACL shapes, example CPS models (both correct and faulty), and scripts to reproduce validation experiments.
+
 
 
 ## Installation
