@@ -6,7 +6,7 @@ A tool designed to implement an Agent-Oriented Model-Driven Development process 
 
 > ℹ️ **Resources:**
 >
-> - The [MDD4CPS_repository_structure_and_transformations](MDD4CPS_repository_structure_and_transformations.md) document describes how the MDD4CPS transformations are implemented within the repository, including the location and role of the CIM-to-PIM, PIM-to-PSM, and PSM-to-Code transformation artefacts.
+> - The [MDD4CPS repository structure and transformations](MDD4CPS_repository_structure_and_transformations.md) document describes how the MDD4CPS transformations are implemented within the repository, including the location and role of the CIM-to-PIM, PIM-to-PSM, and PSM-to-Code transformation artefacts.
 >
 > - The [`semantics/`](semantics/) directory provides proposed artefacts for structural and semantic validations in the PIM phase of MDD4CPS. It includes OWL ontologies, SHACL shapes, example CPS models (both correct and faulty), and scripts to reproduce validation experiments.
 
