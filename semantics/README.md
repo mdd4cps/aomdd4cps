@@ -47,3 +47,6 @@ The included validation cases cover:
   - incomplete messaging structures, payload definitions, and conditional communication links.
 
 Together, these artifacts illustrate how OWL- and SHACL-based validation can help detect modelling inconsistencies and completeness violations before model transformations and code generation take place.
+
+---
+Back to the [documentation home](../README.md).
